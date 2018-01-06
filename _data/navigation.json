@@ -7,12 +7,12 @@
   },
   {
     "text": "About",
-    "url": "{{ site.baseurl }}/about",
+    "url": "/imbue/about",
     "icon": "fa-comments"
   },
   {
     "text": "Projects",
-    "url": "{{ site.baseurl }}/projects",
+    "url": "/imbue/projects",
     "icon": "fa-pencil"
   },
   {
@@ -27,7 +27,7 @@
   },
   {
     "text": "XML Feed",
-    "url": "{{ site.baseurl }}/feed.xml",
+    "url": "/imbue/feed.xml",
     "icon": "fa-feed",
     "target": _blank
   }
