@@ -5,7 +5,7 @@ logo: /static/img/avatar.png
 github: https://github.com/chipprogrammers
 about: Arun&rsquo;s Thoughts and Ideas
 
-baseurl: ""
+baseurl: "/imbue"
 url: "https://chipprogrammers.github.io"
 
 allowsearch: true
