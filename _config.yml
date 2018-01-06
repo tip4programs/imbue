@@ -1,0 +1,28 @@
+title: Chipprogrammers
+description: Tech Blog
+author: Chipprogrammer
+logo: /static/img/avatar.png
+github: https://github.com/chipprogrammers
+about: Arun&rsquo;s Thoughts and Ideas
+
+baseurl: ""
+url: "https://chipprogrammers.github.io"
+
+allowsearch: true
+
+disqus_shortname: https-chipprogrammers-github-io-pimate
+google_analytics: UA-89660760-2
+
+share:
+  twitter_username: ARUNKSOMAN2
+  fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+paginate: 5
+per_page: 5
+paginate_path: "/page:num/"
+markdown: kramdown
+gems: [jekyll-paginate, jekyll-gist]
