@@ -1,22 +1,34 @@
 [
   {
-    "icon": "home",
-    "link": "{{ site.url }}{{site.baseurl }}"
+    "text": "Home",
+    "url": "https://chipprogrammers.github.io/",
+    "icon": "fa-home",
+    "layout": "post"
   },
   {
-    "icon": "fa-twitter",
-    "link": "https://mobile.twitter.com/ARUNKSOMAN2"
+    "text": "About",
+    "url": "/about",
+    "icon": "fa-comments"
   },
   {
-    "icon": "fa-envelope",
-    "link": "mailto:arunksoman5678@gmail.com"
+    "text": "Projects",
+    "url": "/projects",
+    "icon": "fa-pencil"
   },
   {
-    "icon": "fa-stack-exchange",
-    "link": "http://stackoverflow.com/users/7626149/arun"
+    "text": "My Resume",
+    "url": "https://chipprogrammers.github.io/online-cv/",
+    "icon": "fa-graduation-cap"
   },
   {
-    "icon": "fa-reddit",
-    "link": "https://www.reddit.com/user/arunks55"
+    "text": "Github",
+    "url": "https://github.com/chipprogrammers",
+    "icon": "fa-github"
+  },
+  {
+    "text": "XML Feed",
+    "url": "/feed.xml",
+    "icon": "fa-feed",
+    "target": _blank
   }
 ]
