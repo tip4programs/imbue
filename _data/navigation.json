@@ -1,18 +1,18 @@
 [
   {
     "text": "Home",
-    "url": "https://chipprogrammers.github.io/",
+    "url": "https://chipprogrammers.github.io/imbue",
     "icon": "fa-home",
     "layout": "post"
   },
   {
     "text": "About",
-    "url": "/about",
+    "url": "{{ site.baseurl }}/about",
     "icon": "fa-comments"
   },
   {
     "text": "Projects",
-    "url": "/projects",
+    "url": "{{ site.baseurl }}/projects",
     "icon": "fa-pencil"
   },
   {
@@ -27,7 +27,7 @@
   },
   {
     "text": "XML Feed",
-    "url": "/feed.xml",
+    "url": "{{ site.baseurl }}/feed.xml",
     "icon": "fa-feed",
     "target": _blank
   }
