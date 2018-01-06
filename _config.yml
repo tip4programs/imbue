@@ -1,8 +1,9 @@
-title: "Chipprogrammers"
+title: Chipprogrammers
 description: Tech Blog
 author: Chipprogrammer
 github: https://github.com/chipprogrammers
 about: Arun&rsquo;s Thoughts and Ideas
+
 color: orange
 tagline: Electronics for you...
 logo: {{ site.baseurl }}/static/img/now-logo.png
