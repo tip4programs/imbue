@@ -1,4 +1,16 @@
----
-layout:default
----
-{{ content }}
+<html>
+<head>
+{% include head.html %}
+</head>
+  
+<body class="index-page sidebar-collapse">
+
+  {% include navbar.html %}
+    <div class="wrapper">
+      {% include hero_header.html %}
+      {{ content }}
+    {% include footer.html %}
+    </div>
+</body>
+  {% include js.html %}
+</html>
