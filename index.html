@@ -13,6 +13,9 @@ layout: main
      <div class="card-body">
        <div class="tab-content text-center">
            <div class="tab-pane active" id="home" role="tabpanel">
+           <button class="btn btn-success btn-icon  btn-icon-mini btn-round">
+               <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
+               </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
                <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">Read More</a>
            </div>
