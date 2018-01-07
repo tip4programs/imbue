@@ -1,22 +1,22 @@
 [
   {
-    "icon": "fa-whatsapp",
+    "icon": "whatsapp",
     "link": "https://api.whatsapp.com/send?phone=+91-8281618806"
   },
   {
-    "icon": "fa-twitter",
+    "icon": "twitter",
     "link": "https://mobile.twitter.com/ARUNKSOMAN2"
   },
   {
-    "icon": "fa-envelope",
+    "icon": "envelope",
     "link": "mailto:arunksoman5678@gmail.com"
   },
   {
-    "icon": "fa-stack-exchange",
+    "icon": "stack-exchange",
     "link": "http://stackoverflow.com/users/7626149/arun"
   },
   {
-    "icon": "fa-reddit",
+    "icon": "reddit",
     "link": "https://www.reddit.com/user/arunks55"
   }
 ]
