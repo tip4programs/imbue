@@ -4,8 +4,7 @@ layout: default
 <div class="main">
     <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">
       {% for post in paginator.posts %}
-       <div class="card">
-       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="{{ site.color }}">
+      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="{{ site.color }}">
        <li class="nav-item">
        <a class="nav-link active" data-toggle="tab" href="{{ post.url | prepend: site.baseurl }}" role="tab">
             <i class="now-ui-icons objects_umbrella-13"></i> {{ post.title }}
