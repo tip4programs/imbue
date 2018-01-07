@@ -55,7 +55,7 @@ layout: main
       </li>
     {% else %}
         <li class="page-item>
-      <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">&nbsp; &nbsp; &nbsp;{{ page }}&nbsp; &nbsp; &nbsp;</a>
+      <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', 'page' }}">&nbsp; &nbsp; &nbsp;{{ page }}&nbsp; &nbsp; &nbsp;</a>
      </li>
    {% endif %}
   {% endfor %}
