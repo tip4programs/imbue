@@ -1,0 +1,19 @@
+<center>
+<style>
+#clock{
+ color:#5bb66f;
+ display:inline;
+} 
+</style>
+<script>
+function digclock()
+{
+ var d = new Date()
+ var t = d.toLocaleTimeString()
+ 
+ document.getElementById("clock").innerHTML = t
+}
+setInterval(function(){digclock()},1000)
+</script>
+<font color=#5bb66f>Now: </font><div id="clock">
+</div>
