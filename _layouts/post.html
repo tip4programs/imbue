@@ -4,12 +4,14 @@
     </head>
   <body class="index-page sidebar-collapse">
     {% include navbar.html %}
-    <div class="container text-container">
+    <div class="main">
     {% include hero_header.html %}
     {% if page.subtitle %}
     <h4 class="title">{{ page.subtitle }}</h4>
     {% endif %}
+      <div class="container text-container">
     {{ content }}
+        </div>
     {% include footer.html %}
     </div>
     </body>
