@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="main">
     <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">
-      <div class="card">
       {% for post in paginator.posts %}
+        <div class="card">
       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="{{ site.color }}">
        <li class="nav-item">
        <i class="now-ui-icons objects_umbrella-13"></i> {{ post.title }}
@@ -18,9 +18,9 @@ layout: default
            </div>
          </div>
         </div>
+      </div>
        {% endfor %}
-    </div>
-   </div>
+     </div>
 </div>
     <!-- Pagination links -->
     {% if paginator.total_pages > 1 %}
