@@ -26,7 +26,7 @@ tagarray: []
 
 paginate: 5
 per_page: 5
-paginate_path: "/page:num/"
+paginate_path: "/imbue/page:num/"
 markdown: kramdown
 highlighter: rouge
 gems: [jekyll-paginate, jekyll-gist]
