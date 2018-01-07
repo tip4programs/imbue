@@ -39,7 +39,7 @@ layout: main
     <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
         </li>
   {% else %}
-        <li class="page-item">
+        <li class="page-item disabled">
     <a class="page-link" href="#">&laquo; Prev</a>
         </li>
   {% endif %}
@@ -47,7 +47,7 @@ layout: main
   {% for page in (1..paginator.total_pages) %}
    {% if page == paginator.page %}
             <li class="page-item active">
-       <a class="page-link" href="/imbue">{{ page }}</a>
+       <a class="page-link" href="/imbue/">{{ page }}</a>
             </li>
     {% elsif page == 1 %}
       <li class="page-item">
