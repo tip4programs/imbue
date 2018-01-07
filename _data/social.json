@@ -1,22 +1,32 @@
 [
   {
     "icon": "whatsapp",
-    "link": "https://api.whatsapp.com/send?phone=+91-8281618806"
+    "link": "https://api.whatsapp.com/send?phone=+91-8281618806",
+    "color": "#25d366;",
+    "tooltip": "Message me"
   },
   {
     "icon": "twitter",
-    "link": "https://mobile.twitter.com/ARUNKSOMAN2"
+    "link": "https://mobile.twitter.com/ARUNKSOMAN2",
+    "color: "#55acee;",
+    "tooltip": "Follow Me"
   },
   {
     "icon": "envelope",
-    "link": "mailto:arunksoman5678@gmail.com"
+    "link": "mailto:arunksoman5678@gmail.com",
+    "color": "#dd4b39;",
+    "tooltip": "Contact Me
   },
   {
     "icon": "stack-exchange",
-    "link": "http://stackoverflow.com/users/7626149/arun"
+    "link": "http://stackoverflow.com/users/7626149/arun",
+    "color": "#125688;",
+    "tooltip": "Questions"
   },
   {
     "icon": "reddit",
-    "link": "https://www.reddit.com/user/arunks55"
+    "link": "https://www.reddit.com/user/arunks55",
+    "color": "#ff5700;",
+    "tooltip": "Follow Me"
   }
 ]
