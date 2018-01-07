@@ -30,7 +30,7 @@ layout: main
     <ul class="pagination pagination-primary">
     {% if paginator.total_pages == 1 %}
         <li class="page-item active">
-    <a class="page-link active" href="/">{{ page }}</a>
+    <a class="page-link active" href="/imbue">{{ page }}</a>
         </li>
     {% endif %}
 {% if paginator.total_pages > 1 %}
@@ -39,7 +39,7 @@ layout: main
     <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
         </li>
   {% else %}
-        <li class="page-item disabled">
+        <li class="page-item">
     <a class="page-link" href="#">&laquo; Prev</a>
         </li>
   {% endif %}
@@ -51,7 +51,7 @@ layout: main
             </li>
     {% elsif page == 1 %}
       <li class="page-item">
-      <a class="page-link" href="/">{{ page }}</a>
+      <a class="page-link" href="/imbue">{{ page }}</a>
       </li>
     {% else %}
         <li class="page-item>
@@ -65,7 +65,7 @@ layout: main
     <a class="page.link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
       </li>
   {% else %}
-     <li class="page-item disabled">
+     <li class="page-item">
     <a class="page-link" href="#">Next &raquo;</a>
      </li>
   {% endif %}
