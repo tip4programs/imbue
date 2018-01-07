@@ -62,7 +62,7 @@ layout: main
 
   {% if paginator.next_page %}
       <li class="page-item">                                                                                                                     
-    <a class="page.link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
       </li>
   {% else %}
      <li class="page-item disabled">
