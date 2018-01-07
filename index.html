@@ -27,7 +27,8 @@ layout: main
      </div>
 </div>
     <!-- Pagination links -->
-    <ul class="pagination">
+<center>
+    <ul class="pagination pagination-primary">
     {% if paginator.total_pages == 1 %}
         <li class="page-item active">
     <a class="page-link active" href="/imbue">&nbsp; &nbsp; &nbsp; {{ page }} &nbsp; &nbsp; &nbsp;</a>
@@ -72,3 +73,4 @@ layout: main
 </ul>
 {% endif %}
 <!-- end of pagination -->
+</center>
