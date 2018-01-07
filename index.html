@@ -7,15 +7,14 @@ layout: default
       {% for post in paginator.posts %}
       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="{{ site.color }}">
        <li class="nav-item">
-       <a class="nav-link active" data-toggle="tab" href="{{ post.url | prepend: site.baseurl }}" role="tab">
-            <i class="now-ui-icons objects_umbrella-13"></i> {{ post.title }}
-          </a>
-       </li>
+       <i class="now-ui-icons objects_umbrella-13"></i> {{ post.title }}
+           </li>
        </ul>
      <div class="card-body">
        <div class="tab-content text-center">
            <div class="tab-pane active" id="home" role="tabpanel">
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+               <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">Read More</a>
            </div>
          </div>
         </div>
