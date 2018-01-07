@@ -5,6 +5,7 @@
   <body class="index-page sidebar-collapse">
     {% include navbar.html %}
     <div class="wrapper">
+      <div lacss="main>
     {% include hero_header.html %}
     {% if page.subtitle %}
     <h4 class="title">{{ page.subtitle }}</h4>
@@ -12,6 +13,7 @@
       <div class="container text-container">
     {{ content }}
         </div>
+      </div>
     {% include footer.html %}
     </div>
     </body>
