@@ -6,9 +6,18 @@
 <body class="index-page sidebar-collapse">
 
   {% include navbar.html %}
-    <div class="wrapper">
-      {% include hero_header.html %}
+  {% include hero_header.html %}
+  <div class="wrapper">
+	<div class="header">
+
+	</div>
+	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
+	<div class="main">
+		<div class="container">
       {% include content.html %}
+  	</div>
+	</div>
+</div>
       {% include contact.html %}
     {% include footer.html %}
     </div>
