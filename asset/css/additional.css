@@ -4,7 +4,7 @@ html {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
