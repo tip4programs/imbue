@@ -21,20 +21,37 @@
 				</div>
 	      	</a>
 	    </div>
-<div class="collapse navbar-collapse" id="navigation-index">
-   
-              <ul class=" nav navbar-nav navbar-right">
-                {% for link in site.data.navigation %}
-                    <li>
-                        <a href="{{ link.url }}">
-                            <i class=" fa {{ link.icon }}"></i>
-                            {{ link.text }}
-                        </a>
-                    </li>
-                {% endfor %}
-                </ul>
-           </div>
-        </div>
-	
-    </nav>
-    <!-- End Navbar -->
+
+	    <div class="collapse navbar-collapse" id="navigation-index">
+	    	<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="components-documentation.html" target="_blank">
+						<i class="material-icons">dashboard</i> Components
+					</a>
+				</li>
+				<li>
+					<a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
+						<i class="material-icons">unarchive</i> Upgrade to PRO
+					</a>
+				</li>
+				<li>
+					<a rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+						<i class="fa fa-facebook-square"></i>
+					</a>
+				</li>
+				<li>
+					<a rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+						<i class="fa fa-instagram"></i>
+					</a>
+				</li>
+
+	    	</ul>
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->
