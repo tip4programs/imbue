@@ -58,6 +58,7 @@ The time module of the Python makes the program trickier and will help us to mea
 There is two methods to find out the light levels received by LDR. The first method is some complicated and in this method the Python time and RCtime of RPi.GPIO module is directly used for this program. The first program is abstracted in the gpiozero library and hence it easy to handle second program.
 ## Method 1
 ### ldr_spy.py
+
 ```python
 import RPi.GPIO as GPIO, time
 
@@ -88,6 +89,7 @@ while True:
 This program is available on our github repository and it is named as ldr_spy.py. Cloning of these programs are discussed at the end of this session. 
 ## Method 2
 ### ldr_RC_time_check.py
+
 ```python
 from gpiozero import LightSensor, Buzzer
 
@@ -109,6 +111,7 @@ You have to note down the values of these RC time constants during the dark and 
 </tbody></table>
 The circuit diagram to turn on LED at night is shown above. There is no change in the above circuitry. In this circuitry we connected LED to the GPIO #17 through a 220Ω series resistor. The newldr.py is created in accordance with method 1 and ldrorg.py is created accordance with method 2.
 ### newldr.py
+
 ```python
 import RPi.GPIO as GPIO, time
 
@@ -144,6 +147,7 @@ while True:
 ```
 
 ### ldrorg.py
+
 ```python
 import RPi.GPIO as GPIO
 from gpiozero import LightSensor, Buzzer
