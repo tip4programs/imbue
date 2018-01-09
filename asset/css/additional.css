@@ -83,3 +83,6 @@ pre code:after {
 .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nx {
     color: #a6e22e;
 }
+#footer_color{
+    background-color: black;
+}
