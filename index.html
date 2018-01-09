@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-<div class="main">
-    <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">
-        </br>
+
+</br>
       {% for post in paginator.posts %}
         <div class="card">
       <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="{{ site.color }}">
@@ -24,8 +23,7 @@ layout: default
         </div>
       </div>
        {% endfor %}
-     </div>
-</div>
+
     <!-- Pagination links -->
     <ul class="pagination pagination-primary justify-content-center flex-wrap">
     {% if paginator.total_pages == 1 %}
