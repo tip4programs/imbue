@@ -58,8 +58,7 @@ The time module of the Python makes the program trickier and will help us to mea
 There is two methods to find out the light levels received by LDR. The first method is some complicated and in this method the Python time and RCtime of RPi.GPIO module is directly used for this program. The first program is abstracted in the gpiozero library and hence it easy to handle second program.
 ## Method 1
 ### ldr_spy.py
-<pre class="line-numbers">
-<code class="language-python">
+```python
 import RPi.GPIO as GPIO, time
 
 # Tell the GPIO library to use
@@ -84,25 +83,23 @@ def RCtime (PiPin):
 
 # Main program loop
 while True:
-    print (RCtime(4)) # Measure timing using GPIO4
-</code></pre> 
+    print (RCtime(4)) # Measure timing using GPIO4
+```
 This program is available on our github repository and it is named as ldr_spy.py. Cloning of these programs are discussed at the end of this session. 
 ## Method 2
 ### ldr_RC_time_check.py
-<pre class="line-numbers">
-<code class="language-python">
+```python
 from gpiozero import LightSensor, Buzzer
 
   ldr = LightSensor(4)  # alter if using a different pin
   while True:
-      print(ldr.value)
-</code></pre>
+      print(ldr.value)
+```
 The program shown in method 2 is named as ldr_RC_time_check.py in our GitHub repository. You have to run these Python codes and observe the outputs using following commands:
-<pre class="line-numbers">
-<code class="language-bash">
+```bash
 $sudo python ldr_spy.py
 $sudo Python ldr_RC_time_check.py
-</code></pre>
+```
 <font color="red">Note: Don't run codes simultaneously.</font>
 ## Immortal Brightness
 You have to note down the values of these RC time constants during the dark and bright circumstances. These values will help you to turn on and off light by comparing real world situation. However I am not writing these programs to turn on and off light. You can change values in the RCtime((4)) in the if and else statements of the Python code corresponding to our GitHub repository named as newldr.py. Also you can change ldr.value in the if and eligible statements of our program (ldrorg.py) from GitHub repository to turning your LED on at night.
@@ -112,8 +109,7 @@ You have to note down the values of these RC time constants during the dark and 
 </tbody></table>
 The circuit diagram to turn on LED at night is shown above. There is no change in the above circuitry. In this circuitry we connected LED to the GPIO #17 through a 220Ω series resistor. The newldr.py is created in accordance with method 1 and ldrorg.py is created accordance with method 2.
 ### newldr.py
-<pre class="line-numbers">
-<code class="language-python">
+```python
 import RPi.GPIO as GPIO, time
 
 # Tell the GPIO library to use
@@ -144,12 +140,11 @@ while True:
     if RCtime(7)<600:
         GPIO.output(17,False)
     elif RCtime(7)>2200:
-        GPIO.output(17,True)
-</code></pre>
+        GPIO.output(17,True)
+```
 
 ### ldrorg.py
-<pre class="line-numbers">
-<code class="language-python">
+```python
 import RPi.GPIO as GPIO
 from gpiozero import LightSensor, Buzzer
 ldr = LightSensor(4)  # alter if using a different pin
@@ -160,13 +155,12 @@ while True:
     if ldr.value>0.5438098907470703:
         GPIO.output(17,False)
     elif ldr.value==0.0:
-        GPIO.output(17,True)
-</code></pre>
+        GPIO.output(17,True)
+```
 Click [here]( https://github.com/chipprogrammers/ldr) to visit our github repository for clone or download these codes. Alternatively you can also clone the code directly using following commands:
-<pre class="line-numbers">
-<code class="language-bash">
+```bash
 $cd ~
 $git clone git://github.com/chipprogrammers/ldr.git
 # you can navigate to our direcory cloned by you using this command and run Python scripts using sudo python command:
 $cd ldr
-</code></pre>
+```
