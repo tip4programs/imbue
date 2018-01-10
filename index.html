@@ -29,7 +29,8 @@ title: Welcome to Our Blog
        {% endfor %}
 
     <!-- Pagination links -->
-    <ul class="pagination pagination-primary justify-content-center flex-wrap">
+<div class="text-center">
+    <ul class="pagination pagination-primary flex-wrap">
     {% if paginator.total_pages == 1 %}
         <li class="page-item active">
     <a class="page-link active" href="{{ site.baseurl }}">&nbsp; &nbsp; &nbsp; {{ page }} &nbsp; &nbsp; &nbsp;</a>
@@ -73,4 +74,5 @@ title: Welcome to Our Blog
   {% endif %}
 {% endif %}
 </ul>
+</div>
 <!-- end of pagination -->
