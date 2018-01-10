@@ -28,7 +28,7 @@ pre {
     color: #fff;
     margin: 1.875rem 0;
     font-size: .875rem;
-    white-space: pre-wrap;
+    white-space: pre;
     word-wrap: break-word;
     overflow-x:auto;
 }
