@@ -30,6 +30,7 @@ pre {
     font-size: .875rem;
     white-space: pre-wrap;
     word-wrap: break-word;
+    overflow-x:auto;
 }
 @media only screen and (min-width:37.5rem) {
     pre {
@@ -48,6 +49,7 @@ pre {
     padding-left: 0;
     padding-right: 0;
     padding: 0 1.25rem;
+    overflow-x:auto;
 }
 pre code:before, pre code:after {
     content: '';
@@ -108,7 +110,4 @@ pre code:after {
 }
 .highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nx {
     color: #a6e22e;
-}
-#footer_color{
-    background-color: black;
 }
