@@ -28,6 +28,8 @@ pre {
     color: #fff;
     margin: 1.875rem 0;
     font-size: .875rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 @media only screen and (min-width:37.5rem) {
     pre {
