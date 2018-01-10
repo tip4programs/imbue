@@ -37,6 +37,7 @@ pre {
     font-size: 1rem;
     padding: 2.5rem 0;
     margin: 3.125rem 0;
+    overflow-x: auto;
 }
 }pre code {
     *zoom: 1;
@@ -72,7 +73,8 @@ pre code:after {
 }
 @media only screen and (min-width:37.5rem) {
     .highlight {
-    word-wrap: break-word;
+     word-wrap: break-word;
+    overflow-x: auto;
 }
 }.highlight .hll {
     background-color: #333;
