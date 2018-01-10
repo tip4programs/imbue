@@ -21,7 +21,14 @@
 				</div>
 	      	</a>
 	    </div>
-
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
+                            <i class="fa fa-search"></i>
+                            <p>Search</p>
+                        </a>
+                    </li>
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
 			{% for link in site.data.navigation %}
@@ -32,6 +39,7 @@
 			</li>
 			{% endfor %}
 	    	</ul>
+		</ul>
 	    </div>
 	</div>
 </nav>
