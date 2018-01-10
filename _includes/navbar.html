@@ -14,7 +14,7 @@
 	                    <img src="{{ site.baseurl }}/static/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>" data-placement="bottom" data-html="true">
 	                </div>
 	                <div class="brand">
-	                    {{ site.title }]
+	                    {{ site.title }}
 	                </div>
 
 
@@ -26,7 +26,7 @@
 	    	<ul class="nav navbar-nav navbar-right">
 			{% for link in site.data.navigation %}
 				<li>
-				<a rel="tooltip" title="{{ link.tooltip }}" data-placement="bottom" href="{[ link.link }}" target="_blank" class="btn btn-white btn-simple btn-just-icon">
+				<a rel="tooltip" title="{{ link.tooltip }}" data-placement="bottom" href="{{ link.link }}" target="_blank" class="btn btn-white btn-simple btn-just-icon">
 				<i class="fa {{ link.icon }}"></i>
 				</a>
 			</li>
