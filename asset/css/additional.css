@@ -37,7 +37,7 @@ pre {
 }
 }pre code {
     *zoom: 1;
-    overflow-x: auto;
+    width: auto;
     max-width: 50rem;
     float: none;
     display: block;
@@ -56,7 +56,7 @@ pre code:after {
 }
 @media only screen and (max-width:37.5rem) {
     pre code {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 }pre span {
     line-height: 1.5rem;
