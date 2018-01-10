@@ -37,7 +37,7 @@ pre {
 }
 }pre code {
     *zoom: 1;
-    width: auto;
+    overflow-x: auto;
     max-width: 50rem;
     float: none;
     display: block;
