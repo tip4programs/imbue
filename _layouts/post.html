@@ -1,20 +1,19 @@
 <html>
-  <head>
-    {% include head.html %}
-    </head>
-  <body class="index-page sidebar-collapse">
-    {% include navbar.html %}
-    <div class="wrapper">
-    {% include hero_header.html %}
-    {% if page.subtitle %}
-    <h4 class="title">{{ page.subtitle }}</h4>
-    {% endif %}
-      <div class="container text-container">
-    {{ content }}
-        </div>
-      {% include contact.html %}
+<head>
+{% include head.html %}
+</head>
+  
+<body class="index-page">
+  {% include navbar.html %}
+  {% include hero_header.html %}
+
+	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
+	<div class="main main-raised">
+		<div class="container">
+      {% include content.html %}
+  	</div>
+	</div>
     {% include footer.html %}
-    </div>
-    </body>
-    {% include js.html %}
-  </html>
+</body>
+  {% include js.html %}
+</html>
