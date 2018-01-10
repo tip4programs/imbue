@@ -56,7 +56,8 @@ pre code:after {
 }
 @media only screen and (max-width:37.5rem) {
     pre code {
-    overflow-x: auto;
+    overflow-x: scroll;
+    white-space: pre-wrap;
 }
 }pre span {
     line-height: 1.5rem;
