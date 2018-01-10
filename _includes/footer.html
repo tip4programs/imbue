@@ -4,12 +4,12 @@
     </div>
   <div class="text-center col-md-12 col-lg-8">
    {% for x in site.data.social %}
-   <!-- <button class="btn btn-primary btn-fab btn-fab-mini btn-round"> -->
-
-   <a target="_blank" href="{{ x.link }}" class="btn btn-primary btn-fab btn-fab-mini btn-{{ x.icon }} btn-round btn-lg" rel="tooltip" title="{{ x.tooltip }}">
-  <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i>
-      {% endfor %}
+   <button class="btn btn-primary btn-fab btn-fab-mini btn-round">
+   <a target="_blank" href="{{ x.link }}" rel="tooltip" title="{{ x.tooltip }}">
+   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i>
+    </button>
     </a>
+      {% endfor %}
  </div>
   <!--  </div> -->
             <div class="container">
