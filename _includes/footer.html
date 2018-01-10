@@ -1,11 +1,12 @@
 <footer class="panel panel-footer">
- <div class="row justify-content-md-center sharing-area text-center">
-   <div class="text-center col-md-12 col-lg-8">
+ <div class="text-center col-md-12 col-lg-8">
   <h3>Contact Me!</h3>
     </div>
   <div class="text-center col-md-12 col-lg-8">
    {% for x in site.data.social %}
-   <a target="_blank" href="{{ x.link }}" class="btn btn-neutral btn-icon btn-{{ x.icon }} btn-round btn-lg" rel="tooltip" title="{{ x.tooltip }}">
+   <!-- <button class="btn btn-primary btn-fab btn-fab-mini btn-round"> -->
+
+   <a target="_blank" href="{{ x.link }}" class="btn btn-primary btn-fab btn-fab-mini btn-{{ x.icon }} btn-round btn-lg" rel="tooltip" title="{{ x.tooltip }}">
   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i>
       {% endfor %}
     </a>
