@@ -1,5 +1,6 @@
 .highlight pre code * {
   white-space: nowrap;    // this sets all children inside to nowrap
+  border-radius: 10px;
 }
 
 .highlight pre {
