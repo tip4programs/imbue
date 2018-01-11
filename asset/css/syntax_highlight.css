@@ -1,3 +1,14 @@
+pre {
+    background: #222;
+    width: 100%;
+    padding: 1.25rem 0;
+    color: #fff;
+    margin: 1.875rem 0;
+    font-size: .875rem;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow-x:auto;
+}
 .highlight pre code * {
   white-space: nowrap;    // this sets all children inside to nowrap
 }
