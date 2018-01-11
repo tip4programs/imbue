@@ -37,7 +37,7 @@
 			{% for y in site.data.navigation %}
 				<li>
 				<a rel="tooltip" title="{{ y.tooltip }}" data-placement="bottom" href="{{ y.link }}" class="btn btn-white btn-simple btn-just-icon">
-				<i class="fa {{ y.icon }}"></i>
+				<i class="fa {{ y.icon }}"></i> {{ y.tooltip }}
 				</a>
 			</li>
 			{% endfor %}
