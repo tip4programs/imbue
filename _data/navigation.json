@@ -1,32 +1,32 @@
 [
   {
-    "text": "Home",
+    "tooltip": "Home",
     "url": "https://chipprogrammers.github.io/imbue",
     "icon": "fa-home",
     "layout": "post"
   },
   {
-    "text": "About",
+    "tooltip": "About",
     "url": "/imbue/about",
     "icon": "fa-comments"
   },
   {
-    "text": "Projects",
+    "tooltip": "Projects",
     "url": "/imbue/projects",
     "icon": "fa-pencil"
   },
   {
-    "text": "My Resume",
+    "tooltip": "My Resume",
     "url": "https://chipprogrammers.github.io/online-cv/",
     "icon": "fa-graduation-cap"
   },
   {
-    "text": "Github",
+    "tooltip": "Github",
     "url": "https://github.com/chipprogrammers",
     "icon": "fa-github"
   },
   {
-    "text": "XML Feed",
+    "tooltip": "XML Feed",
     "url": "/imbue/feed.xml",
     "icon": "fa-feed",
     "target": _blank
