@@ -24,9 +24,9 @@
                 <ul>
                 {% endif %}
                 <li class="relatedPost">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}</a>
                     {% if post.categories %}
-                        <small>(Categories: {% for category in post.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})</small>
+                        <small>(Categories: {% for category in post.categories %}<a href="{{ site.baseurl }}/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})</small>
                     {% endif %}
                 </li>
                 {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
