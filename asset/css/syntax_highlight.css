@@ -7,7 +7,7 @@
 }
 
 .highlight pre code {
-  white-space: pre;       // forces <code> to respect <pre> formatting
+  white-space: nowrap;       // forces <code> to respect <pre> formatting
 }
 code {
     padding: 2px 4px;
