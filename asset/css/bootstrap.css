@@ -128,7 +128,7 @@ hr {
     height: 0
 }
 
-pre {
+/* pre {
     overflow: auto
 }
 
@@ -138,7 +138,7 @@ pre,
 samp {
     font-family: monospace, monospace;
     font-size: 1em
-}
+} */
 
 button,
 input,
@@ -263,7 +263,6 @@ th {
     a[href^="javascript:"]:after {
         content: ""
     }
-    pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid
@@ -858,7 +857,7 @@ address {
     line-height: 1.42857143
 }
 
-code,
+/* code,
 kbd,
 pre,
 samp {
@@ -917,7 +916,7 @@ pre code {
 .pre-scrollable {
     max-height: 340px;
     overflow-y: scroll
-}
+} */
 
 .container {
     margin-right: auto;
