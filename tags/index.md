@@ -20,7 +20,7 @@ search_omit: true
   <h2 id="{{ this_word }}">{{ this_word }}</h2>
   <ul>
   {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <li><a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}&nbsp;&nbsp;&nbsp;&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
+    <li><a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}&nbsp;&nbsp;&nbsp;&nbsp;<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></li>
   {% endif %}{% endfor %}
   </ul>
 {% endunless %}{% endfor %}
