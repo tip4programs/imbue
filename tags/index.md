@@ -18,9 +18,9 @@ search_omit: true
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
   <h2 id="{{ this_word }}">{{ this_word }}</h2>
-  <ul style="list-style:none;">
+  <ul class="list-unstyled">
   {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <li><a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}<div class="pull-right"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></div></a></li>
+    <li><a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}&nbsp;&nbsp;&nbsp;&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
   {% endif %}{% endfor %}
   </ul>
 {% endunless %}{% endfor %}
