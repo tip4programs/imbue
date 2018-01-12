@@ -8,7 +8,7 @@ search_omit: true
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
 
-<ul class="list-unstyled">
+<ul class="list-unstyled" style="display:inline">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
     <li><a class="btn btn-primary" href="#{{ this_word }}">{{ this_word }}{{ site.tags[this_word].size }}</a></li>
