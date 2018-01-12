@@ -9,6 +9,13 @@
 .highlight pre code {
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
+}
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #272822; color: #f8f8f2 }
 .highlight .c { color: #75715e } /* Comment */
