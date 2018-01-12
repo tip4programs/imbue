@@ -11,7 +11,7 @@ search_omit: true
 <ul class="list-unstyled">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-    <li><a class="btn btn-info" role= "button" href="#{{ this_word }}">{{ this_word }}{{ site.tags[this_word].size }}</a></li>
+    <li><a class="btn btn-primary" href="#{{ this_word }}">{{ this_word }}{{ site.tags[this_word].size }}</a></li>
   {% endunless %}{% endfor %}
 </ul>
 
