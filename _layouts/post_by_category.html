@@ -1,12 +1,15 @@
----
-layout: default
----
-<div class="content well">
-<header id="post-header">
-    <h1 id="post-subtitle">Articles by category: <em class="text-muted">{{ page.categories }}</em></h1>
-</header>
+<html>
+<head>
+{% include head.html %}
+</head>
+  
+<body class="index-page">
+  {% include navbar.html %}
+  {% include hero_header.html %}
 
-<div id="post-content">
+	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
+	<div class="main main-raised">
+		<div class="container">
     <hr />
     {% for category in site.categories %}
         {% capture category_slug %}{{ category | first }}{% endcapture %}
@@ -54,3 +57,7 @@ layout: default
     {% endif %}
 </div>
 </div>
+  {% include footer.html %}
+</body>
+  {% include js.html %}
+</html>
