@@ -112,8 +112,7 @@ end tell
 
 ### Code snippet
 
-<pre class="line-numbers">
-<code class="language-python">
+{% highlight python linenos %}
 if __name__ =='__main__':
     img_thread = threading.Thread(target=downloadWallpaper)
     img_thread.start()
@@ -124,5 +123,5 @@ if __name__ =='__main__':
         current=current+1
         time.sleep(0.3)
     img_thread.join()
-    print('\nImage of the day downloaded.')
-</code></pre>
+    print('\nImage of the day downloaded.')
+{% endhighlight %}
