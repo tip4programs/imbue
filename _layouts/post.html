@@ -12,7 +12,7 @@
 	<div class="container">
       {% include content.html %}
 	<ul class="entry-tags">
-          {% for tag in page.tags %}<li><a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>{% endfor %}
+          {% for tag in page.tags %}<li><a href="{{ site.url | prepend:site.baseurl }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>{% endfor %}
         </ul>
         </div>
 		{% assign hasSimilar = '' %}
