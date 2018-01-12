@@ -21,7 +21,7 @@
                 {% if hasSimilar.size == 0 %}
                 <div class="panel-body">
                 <h4>Related Posts</h4>
-                <ul>
+                <ul class="list-unstyled">
                 {% endif %}
                 <li class="relatedPost">
                     <a href="{{ post.url |prepend:site.baseurl }}">{{ post.title }}</a>
