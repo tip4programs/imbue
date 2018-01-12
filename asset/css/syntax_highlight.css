@@ -6,8 +6,8 @@
   overflow-x: scroll;       // this sets the scrolling in x
 }
 
-.highlight code {
-  white-space: nowrap;       // forces <code> to respect <pre> formatting
+.highlight pre code {
+  white-space: pre;       // forces <code> to respect <pre> formatting
 }
 code {
     padding: 2px 4px;
@@ -16,6 +16,30 @@ code {
     background-color: #f9f2f4;
     border-radius: 4px
 }
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0
+}
+
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #272822; color: #f8f8f2 }
 .highlight .c { color: #75715e } /* Comment */
