@@ -2,8 +2,11 @@
 layout: post
 title:  "Digital Clock"
 date:   2017-06-20 14:20:39 -0700
-categories: Web_Design
-tags: HTML JavaScript
+categories: 
+  - Web Design
+tags: 
+  - HTML
+  - JavaScript
 ---
 
 # Digital Clock Using JavaScript
