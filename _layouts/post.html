@@ -13,7 +13,7 @@
       {% include content.html %}
         <ul class="taggs">
       {% for tag in page.tags %}
-       <li><a href="{{ site.baseurl }}/tags#{{ tag | cgi_escape }}" class="tagg">{{ tag }}</a></li>
+       <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
       {% endfor %}
       </ul>
 		{% assign hasSimilar = '' %}
