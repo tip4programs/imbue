@@ -23,6 +23,7 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
+	{% if site.allowsearch ==  true %}
 		<li>
 		 <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                       <i class="fa fa-search"></i>
@@ -33,7 +34,9 @@
                  <input type="text" value="" class="form-control" placeholder="Search...">
                  </div>
 	         </form>
+		<ul class="search__results" id="js-search__results"></ul>
 		 </li>
+	 {% endif %}
 			{% for y in site.data.navigation %}
 				<li>
 				<a rel="tooltip" title="{{ y.tooltip }}" data-placement="bottom" href="{{ y.url }}" class="btn btn-white btn-simple btn-just-icon">
