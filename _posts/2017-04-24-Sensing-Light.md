@@ -2,7 +2,9 @@
 layout: post
 title: Sensing Light
 categories: Electronics
-tags: Raspberry&nbsp;Pi Python
+tags: 
+  - Raspberry Pi
+  - Python
 ---
 # Sensing Light using LDR
 ### A shopping List of Parts
