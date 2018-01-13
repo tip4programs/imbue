@@ -1,23 +1,15 @@
-<div class="search-wrapper">
-    <div class="search-form">
-        <input type="text" class="search-field" placeholder="Search...">
-        <i class="material-icons">close</i>
-        <ul class="search-results search-list"></ul>
-    </div>
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="Search..." />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
 </div>
-
-<div id="fade" class="overlay"></div>
-<a id="slide" class="slideButton fade">
-    <!-- <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg> -->
-    <i class="material-icons">close</i>
-</a>
-
-  <ul>
     {% for link in site.links %}
       <li><a href="{{ site.url }}{{site.baseurl}}{{ link.url }}">{{ link.title }}</a></li>
     {% endfor %}
     <!-- <li><a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">Feed</a></li> -->
   </ul>
-<a id="search" class="dosearch">
+<a href="#search" class="docsearch">
     <i class="material-icons">search</i>
 </a>
