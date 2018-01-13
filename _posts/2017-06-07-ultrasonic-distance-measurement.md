@@ -63,4 +63,5 @@ while True:
 
     print("Distance : {0:5.1f}".format(distance))
     GPIO.cleanup()
+    
   {% endhighlight %}
