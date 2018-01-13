@@ -62,6 +62,5 @@ while True:
     distance = distance / 2
 
     print("Distance : {0:5.1f}".format(distance))
-    GPIO.cleanup()
-    
+    GPIO.cleanup()
   {% endhighlight %}
