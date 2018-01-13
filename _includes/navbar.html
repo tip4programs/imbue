@@ -24,6 +24,7 @@
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
 		<li>
+			<div class="super-search" id="js-super-search">
 		 <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                       <i class="fa fa-search"></i>
                        <p>Search</p>
@@ -34,6 +35,7 @@
                  </div>
 	         </form>
 	<ul class="super-search__results" id="js-super-search__results"></ul>
+			</div>	
 		 </li>
 			{% for y in site.data.navigation %}
 				<li>
