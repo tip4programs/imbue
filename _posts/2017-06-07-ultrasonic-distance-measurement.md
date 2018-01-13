@@ -8,8 +8,7 @@ tags:
 - Python
 ---
 To know more about the circuitry of this program visit our blog by clicking [here](https://chipprogrammer.blogspot.in/2017/05/measuring-distance.html?m=1). This program continuously displays speed of sound, temperature, and distance from sensor to obstacle.
-<pre class="line-numbers">
-<code class="language-python">
+```python
 import time
 import RPi.GPIO as GPIO
 while True:
@@ -63,4 +62,4 @@ while True:
 
     print("Distance : {0:5.1f}".format(distance))
     GPIO.cleanup()
-    </code></pre>
+  ```
