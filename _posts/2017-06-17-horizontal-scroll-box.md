@@ -2,7 +2,7 @@
 layout: post
 title:  "Horizontal scroll box"
 date:   2017-06-17 10:07:39 -0700
-categories: ['Web Design']
+categories: ['Web_Design']
 tags: ['HTML', 'CSS']
 ---
 ## Horizontal Scroll box for blogger
