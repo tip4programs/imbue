@@ -70,7 +70,7 @@
 }
 
 .tagg {
-  background: #337ab7;
+  background: #9400D3;
   border-radius: 3px 0 0 3px;
   color: #ffffff;
   display: inline-block;
@@ -98,7 +98,7 @@
 .tagg::after {
   background: #fff;
   border-bottom: 13px solid transparent;
-  border-left: 10px solid #337ab7;
+  border-left: 10px solid #9400D3;
   border-top: 13px solid transparent;
   content: '';
   position: absolute;
@@ -106,12 +106,12 @@
   top: 0;
 }
 .tagg:hover {
-  background-color: #3c763d;
+  background-color: #32CD32;
   color: white;
 }
 
 .tagg:hover::after {
-   border-left-color: #3c763d;
+   border-left-color: #32CD32;
 }
 /* figure caption */
 figure img{
