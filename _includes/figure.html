@@ -1,5 +1,5 @@
 {% if include.alt %}{% assign altText = include.alt %}{% else %}{% assign altText = include.caption %}{% endif %}
 <figure class="figure{% if include.position %}  figure--{{ include.position }}{% endif %}">
   <img class="image" src="{{ include.image }}" class="img-responsive" {% if altText %}alt="Image - {{ altText }}"{% endif %}>
-  {% if include.caption %} <figcaption class="caption">{{ include.caption }}</figcaption>{% endif %}
+  {% if include.caption %} <figcaption class="figure-caption text-center">{{ include.caption }}</figcaption>{% endif %}
 </figure>
