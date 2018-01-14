@@ -126,7 +126,7 @@ figure img{
   border: none;
   background: transparent;
   word-wrap:normal;
-  text-align: center;
+  /* text-align: center; */
 }
 a {
   text-decoration:none;
