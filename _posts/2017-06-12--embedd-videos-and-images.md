@@ -15,4 +15,4 @@ tags: Jekyll HTML
 
 {% include figure.html image="https://unsplash.it/300/400?image=123" caption="This image has a caption but also alt text" alt="This is the alt text" position="right" %}
 
-{% include figure.html image="https://unsplash.it/800/400?image=123" caption="This image has also caption" alt="This image has alt text" %}
+{% include figure.html image="https://unsplash.it/800/400?image=123" caption="This image has also caption" alt="This image has alt text" position="center" %}
