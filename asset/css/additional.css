@@ -123,7 +123,7 @@
   border: none;
   background: transparent;
   word-wrap:normal;
-  position: absolute;
+  text-align: inherit;
 }
 a {
   text-decoration:none;
