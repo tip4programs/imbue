@@ -113,3 +113,18 @@
 .tagg:hover::after {
    border-left-color: #3c763d;
 }
+/* figure caption */
+ figcaption {
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #808080;
+  border: none;
+  background: transparent;
+  word-wrap:normal;
+  text-align: center;
+}
+a {
+  text-decoration:none;
+}
