@@ -11,7 +11,7 @@
 	<div class="main main-raised">
 	<div class="container">
       {% include content.html %}
-		<i class="fa fa-tags fa-2x" aria-hidden="true"></i><h4>Posts are tagged on:</h4>
+		<i class="fa fa-tags fa-2x" aria-hidden="true"></i><h4 style="display:inline">Posts are tagged on:</h4>
         <ul class="taggs">
                 {% for tag in page.tags %}
                 <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
