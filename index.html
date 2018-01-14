@@ -9,13 +9,13 @@ title: Welcome to Our Blog
         <div class="nav-tabs-wrapper">
       <ul class="nav nav-tabs" data-tabs="tabs">
        <li class="nav-item">
-       <i class="now-ui-icons objects_umbrella-13"></i> {{ post.title }}
+       {{ post.title }}
            </li>
        </ul>
               </div>
               </div>
      <div class="content">
-       <div class="tab-content text-center">
+       <div class="tab-content text-center flex-wrap">
            <div class="tab-pane active" id="home" role="tabpanel">
            <button class="btn btn-success btn-round">
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
