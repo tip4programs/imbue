@@ -13,6 +13,7 @@
       {% include content.html %}
         <ul class="taggs">
       {% for tag in page.tags %}
+		<i class="fa fa-tags fa-3x" aria-hidden="true"></i></h4>Posts are tagged on:
        <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
       {% endfor %}
       </ul>
