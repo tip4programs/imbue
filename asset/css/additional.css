@@ -121,6 +121,7 @@
   font-weight: 300;
   color: #808080;
   border: none;
+  display: block;
   background: transparent;
   word-wrap:normal;
   /* text-align: center; */
