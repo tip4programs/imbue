@@ -114,9 +114,9 @@
    border-left-color: #32CD32;
 }
 /* figure caption */
-figure img{
+/* figure img{
   display: block;
-}
+} */
  figcaption {
   padding: 5px;
   font-family: 'Ubuntu', sans-serif;
@@ -128,6 +128,5 @@ figure img{
   word-wrap:normal;
   /* text-align: center; */
 }
-a {
-  text-decoration:none;
-}
+
+
