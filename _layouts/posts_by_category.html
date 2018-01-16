@@ -36,7 +36,7 @@ layout: default
       {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if forloop.first %}
       <button class="btn btn-success btn-round">
-      <i class="fa fa-calendar" aria-hidden="true"></i> {{ post_year }}
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
       </button>
       {% endif %} 
             {% if forloop.first == false %}
@@ -44,7 +44,7 @@ layout: default
                 {% capture previous_post_year %}{{ site.categories[page.categories][previous_index].date | date: '%Y' }}{% endcapture %}
                 {% if post_year != previous_post_year %}
                 <button class="btn btn-success btn-round">
-                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post_year }}
+                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                 </button>
                 {% endif %}
             {% endif %} 
