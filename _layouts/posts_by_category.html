@@ -35,17 +35,17 @@ layout: default
       <div class="tab-pane active" role="tabpanel" style="overflow:hidden">
       {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if forloop.first %}
-      <button class="btn btn-success btn-round">
+      <!-- <button class="btn btn-success btn-round">
       <i class="fa fa-calendar" aria-hidden="true"></i> {{ post_year}}
-      </button>
+      </button> -->
       {% endif %} 
             {% if forloop.first == false %}
                 {% assign previous_index = forloop.index0 | minus: 1 %}
                 {% capture previous_post_year %}{{ site.categories[page.categories][previous_index].date | date: '%Y' }}{% endcapture %}
                 {% if post_year != previous_post_year %}
-                <button class="btn btn-success btn-round">
+                <!-- <button class="btn btn-success btn-round">
                 <i class="fa fa-calendar" aria-hidden="true"></i> {{ post_year }}
-                </button>
+                </button> -->
                 {% endif %}
             {% endif %}
              <button class="btn btn-success btn-round">
