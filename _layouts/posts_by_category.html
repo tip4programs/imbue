@@ -50,11 +50,11 @@ layout: default
             {% endif %} 
             <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
             <a href="{{ post.url |prepend:site.baseurl }}" class="btn btn-primary">Read More</a>
-            {% endfor %}
-              </div>
+                         </div>
         </div>
       </div>
    </div>
+{% endfor %}
     {% else %}
      <p>There are no posts in this categories.</p>
     {% endif %}
