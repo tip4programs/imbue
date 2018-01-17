@@ -32,7 +32,12 @@
                  <input type="text" id="js-super-search__input" class="form-control super-search__input" placeholder="Search...">
                  </div>
 	         </form>
-		{% incude search_result.html %}
+		<div class="super-search" id="js-search">
+                <ul class="super-search__results" id="js-search__results"></ul>        
+                <button class="btn btn-primary btn-just-icon" onclick="superSearch.toggle()">
+                <i class="material-icons">close</i>
+                   </button>
+                </div>
 		 </li>
 			<!-- <li>
 				<a rel="tooltip" title="{{ search }}" data-placement="bottom" href="/imbue/search.html" class="btn btn-white btn-simple btn-just-icon">
