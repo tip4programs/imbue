@@ -3,7 +3,6 @@ layout: default
 title: Welcome to Our Blog
 ---
 
-<div class="section section-tabs">
 {% for post in paginator.posts %}
 <div class="col-md-6">
         <div class="card card-nav-tabs">
@@ -17,7 +16,7 @@ title: Welcome to Our Blog
               </div>
               </div>
      <div class="content">
-       <div class="tab-content text-center style="overflow:hidden">
+       <div class="tab-content text-center">
            <div class="tab-pane active" role="tabpanel" style="overflow:hidden">
            <button class="btn btn-success btn-round">
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
@@ -30,9 +29,9 @@ title: Welcome to Our Blog
       </div>
     </div>
        {% endfor %}
-  </div>
+                                                                                       
     <!-- Pagination links -->
-<div class="section section-pagination">                                                                             
+                                                                                       
 <div class="text-center">
     <ul class="pagination pagination-primary flex-wrap">
     {% if paginator.total_pages == 1 %}
@@ -78,6 +77,5 @@ title: Welcome to Our Blog
   {% endif %}
 {% endif %}
 </ul>
-</div>
 </div>
 <!-- end of pagination -->
