@@ -1,8 +1,16 @@
---
-layout: default
----
+<html>
+<head>
+{% include head.html %}
+</head>
+  
+<body class="index-page">
+  {% include navbar.html %}
+  {% include hero_header.html %}
 
-{{ content }}
+	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
+	<div class="main main-raised">
+	<div class="container">
+      {% include content.html %}
 		<i class="fa fa-tags fa-lg" aria-hidden="true"></i><h4 style="display:inline">Posts is tagged on:</h4>
         <ul class="taggs">
                 {% for tag in page.tags %}
@@ -64,3 +72,8 @@ layout: default
 	</div>
 </div>
 </div>
+</div>
+    {% include footer.html %}
+</body>
+  {% include js.html %}
+</html>
