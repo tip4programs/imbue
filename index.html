@@ -3,8 +3,8 @@ layout: default
 title: Welcome to Our Blog
 ---
 
-<div class="col-md-6">
-      {% for post in paginator.posts %}
+{% for post in paginator.posts 
+     <div class="col-md-6">
         <div class="card card-nav-tabs">
         <div class="header header-success">
         <div class="nav-tabs-wrapper">
@@ -27,8 +27,9 @@ title: Welcome to Our Blog
          </div>
         </div>
       </div>
+    </div>                                                                              
        {% endfor %}
-</div>
+                                                                                       
     <!-- Pagination links -->
 <div class="text-center">
     <ul class="pagination pagination-primary flex-wrap">
