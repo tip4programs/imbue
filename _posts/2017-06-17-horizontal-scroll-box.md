@@ -2,8 +2,11 @@
 layout: post
 title:  "Horizontal scroll box"
 date:   2017-06-17 10:07:39 -0700
-categories: ['Web_Design']
-tags: ['HTML', 'CSS']
+categories: Web_Design
+card_color: success
+tags: 
+- HTML
+-CSS
 ---
 ## Horizontal Scroll box for blogger
 If you are a Blogger, you have to create horizontal scrolling boxes for showing your codes. It is not easy to setup [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) or [Prism](http://prismjs.com) for Blogger and WordPress. However you can create beautiful horizontal scroll boxes for codes. In this post I will show you how it becomes possible. Go to your blogger control panel and create a new post. Before copying this code make sure that you are using HTML editor mode. Whenever you want a code snippet you can use following code.
