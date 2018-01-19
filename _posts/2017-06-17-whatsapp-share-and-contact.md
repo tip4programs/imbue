@@ -3,7 +3,10 @@ layout: post
 title:  "WhatsApp Share and Contact Button"
 date:   2017-06-17 10:07:39 -0700
 categories: jekyll
-tags: Jekyll HTML
+card_color: danger
+tags: 
+- Jekyll
+- HTML
 ---
 ### Whatsapp Share Button
 Nowadays Whatsapp became a powerful messegaing platform. So get in touch with friends and colleagues we are using whatsapp. So Whatsapp has 600 million users in world wide. It is not a small number. Nowadays WhatsApp has more number of users than any other social media except facebook. In this post we will discuss how can we create a WhatsApp share button for a Jekyll Website. See the following code.
