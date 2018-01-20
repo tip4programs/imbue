@@ -1,57 +1,116 @@
-jQuery(function() {
-  // Initialize lunr with the fields to be searched, plus the boost.
-  window.idx = lunr(function () {
-    this.field('id');
-    this.field('title');
-    this.field('content', { boost: 10 });
-    this.field('author');
-    this.field('categories');
-  });
+(function() {
+    var isSearchOpen = false,
+        searchEl = document.querySelector('#js-search'),
+        searchInputEl = document.querySelector('#js-search__input'),
+        searchResultsEl = document.querySelector('#js-search__results'),
+        currentInputValue = '',
+        lastSearchResultHash, posts = [],
+        sitemap = (baseurl || '') + '/sitemap.xml';
 
-  // Get the generated search_data.json file so lunr.js can search it locally.
-  window.data = $.getJSON('/search_data.json');
-
-  // Wait for the data to load and add it to lunr
-  window.data.then(function(loaded_data){
-    $.each(loaded_data, function(index, value){
-      window.idx.add(
-        $.extend({ "id": index }, value)
-      );
-    });
-  });
-
-  // Event when the form is submitted
-  $("#site_search").submit(function(event){
-      event.preventDefault();
-      var query = $("#search_box").val(); // Get the value for the text field
-      var results = window.idx.search(query); // Get lunr to perform a search
-      display_search_results(results); // Hand the results off to be displayed
-  });
-
-  function display_search_results(results) {
-    var $search_results = $("#search_results");
-
-    // Wait for data to load
-    window.data.then(function(loaded_data) {
-
-      // Are there any results?
-      if (results.length) {
-        $search_results.empty(); // Clear any old results
-
-        // Iterate over the results
-        results.forEach(function(result) {
-          var item = loaded_data[result.ref];
-
-          // Build a snippet of HTML for this result
-          var appendString = '<li><a href="' + item.url + '">' + item.title + '</a></li>';
-
-          // Add the snippet to the collection of results.
-          $search_results.append(appendString);
+    function xmlToJson(xml) {
+        var obj = {};
+        if (xml.nodeType == 1) {
+            if (xml.attributes.length > 0) {
+                obj["@attributes"] = {};
+                for (var j = 0; j < xml.attributes.length; j++) {
+                    var attribute = xml.attributes.item(j);
+                    obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+                }
+            }
+        } else if (xml.nodeType == 3) {
+            obj = xml.nodeValue;
+        }
+        var textNodes = [].slice.call(xml.childNodes).filter(function(node) {
+            return node.nodeType === 3;
         });
-      } else {
-        // If there are no results, let the user know.
-        $search_results.html('<li>No results found.<br/>Please check spelling, spacing, yada...</li>');
-      }
+        if (xml.hasChildNodes() && xml.childNodes.length === textNodes.length) {
+            obj = [].slice.call(xml.childNodes).reduce(function(text, node) {
+                return text + node.nodeValue;
+            }, '');
+        } else if (xml.hasChildNodes()) {
+            for (var i = 0; i < xml.childNodes.length; i++) {
+                var item = xml.childNodes.item(i);
+                var nodeName = item.nodeName;
+                if (typeof(obj[nodeName]) == "undefined") {
+                    obj[nodeName] = xmlToJson(item);
+                } else {
+                    if (typeof(obj[nodeName].push) == "undefined") {
+                        var old = obj[nodeName];
+                        obj[nodeName] = [];
+                        obj[nodeName].push(old);
+                    }
+                    obj[nodeName].push(xmlToJson(item));
+                }
+            }
+        }
+        return obj;
+    }
+
+    function getPostsFromXml(xml) {
+        var json = xmlToJson(xml);
+        return json.channel.item;
+    }
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", sitemap);
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState != 4) return;
+        if (xmlhttp.status != 200 && xmlhttp.status != 304) {
+            return;
+        }
+        var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
+        node = node.children[0];
+        posts = getPostsFromXml(node);
+    }
+    xmlhttp.send();
+    window.toggleSearch = function toggleSearch() {
+        _gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
+        searchEl.classList.toggle('is-active');
+        if (searchEl.classList.contains('is-active')) {
+            searchInputEl.value = '';
+        } else {
+            searchResultsEl.classList.add('is-hidden');
+        }
+        setTimeout(function() {
+            searchInputEl.focus();
+        }, 210);
+    }
+    window.addEventListener('keyup', function onKeyPress(e) {
+        if (e.which === 27) {
+            toggleSearch();
+        }
     });
-  }
-});
+    window.addEventListener('keypress', function onKeyPress(e) {
+        if (e.which === 47 && !searchEl.classList.contains('is-active')) {
+            toggleSearch();
+        }
+    });
+    searchInputEl.addEventListener('input', function onInputChange() {
+        var currentResultHash, d;
+        currentInputValue = (searchInputEl.value + '').toLowerCase();
+        if (!currentInputValue || currentInputValue.length < 3) {
+            lastSearchResultHash = '';
+            searchResultsEl.classList.add('is-hidden');
+            return;
+        }
+        searchResultsEl.style.offsetWidth;
+        var matchingPosts = posts.filter(function(post) {
+            if ((post.title + '').toLowerCase().indexOf(currentInputValue) !== -1 || (post.description + '').toLowerCase().indexOf(currentInputValue) !== -1) {
+                return true;
+            }
+        });
+        if (!matchingPosts.length) {
+            searchResultsEl.classList.add('is-hidden');
+        }
+        currentResultHash = matchingPosts.reduce(function(hash, post) {
+            return post.title + hash;
+        }, '');
+        if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
+            searchResultsEl.classList.remove('is-hidden');
+            searchResultsEl.innerHTML = matchingPosts.map(function(post) {
+                d = new Date(post.pubDate);
+                return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/, '$2 $1, $3') + '</span></a></li>';
+            }).join('');
+        }
+        lastSearchResultHash = currentResultHash;
+    });
+})();
