@@ -1,5 +1,11 @@
 <!-- Navbar -->
 <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+	     {% if site.allowsearch ==  true %}
+            <div class="col-md-6 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+              <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+              <ul class="search__results" id="js-search__results"></ul>
+            </div>
+            {% endif %}
 	<div class="container">
         <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -23,17 +29,6 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
-		<li>
-		 <a href="javascript:void(0);" data-toggle="sarch" class="hidden-xs">
-                      <i class="material-icons">search</i>
-                 </a>
-		 <form class="navbar-form navbar-right navbar-search-form" action="get" id="site_search">                  
-                 <div class="form-group">
-                 <input type="text" id="js-search__input class="form-control" placeholder="Search...">
-                 </div>
-	         </form>
-			<ul class="search__results" id="js-search__results"></ul>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- <div class="super-search" id="js-search">
                 <ul class="super-search__results" id="js-search__results"></ul>        
                 <button class="btn btn-primary btn-just-icon" onclick="superSearch.toggle()">
