@@ -4,8 +4,8 @@
 * Horizantally scrollable syntax highlight using monokai theme
 * sticky transparent navigation header
 * Posts archived by tags
-* Sticky transparent back to top button(coming soon)
+* Sticky transparent back to top button after scrolling down 1000px
+* Footer is included
 * Social share buttons using addthis(coming soon)
 * Search overlay(coming soon)
-* Footer is included
 * responsive images with fig caption and wrapping texts aound images(need some improvements)
