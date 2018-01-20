@@ -1,5 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+	<a href="#search"><i class="material-icons">search</i></a>
+	{% include site_search.html %}
         <div class="container">
         <div class="navbar-header">
 	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
@@ -23,8 +25,6 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
-			<li><a href="#search"><i class="material-icons">search</i></a></li>
-			{% include site_search.html %}
 		<!-- <div class="super-search" id="js-search">
                 <ul class="super-search__results" id="js-search__results"></ul>        
                 <button class="btn btn-primary btn-just-icon" onclick="superSearch.toggle()">
