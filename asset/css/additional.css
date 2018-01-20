@@ -1,60 +1,11 @@
-/* super-search
-Author: Kushagra Gour (http://kushagragour.in)
-MIT Licensed
-*/
-
-.super-search {
-  background-color: $super-search;
-  z-index: 999;
-  transition: 0.2s ease;
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  will-change: transform, opacity;
-}
-.super-search__close-btn {
-  float: right;
-  margin-right: 15px;
-}
-.super-search__input {
-  transition: 0.15s ease-out 150ms;
-}
-.is-active .super-search__input {
-  transform: translateY(0);
-}
-.super-search__results {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  overflow-x: hidden;
-  height: calc(100% - 110px);
-  transition: 0.2s ease;
-}
-.super-search__results.is-hidden {
-  opacity: 0;
-  transform: translateY(-1vh);
-}
-
-.super-search__results > li > a {
-  display: block;
-  position: relative;
-  background-color: #f9f9f9;
-  color: #666;
-  padding: 17px;
-  margin: 12px 14px;
-  box-shadow: 0 3px 4px rgba(0,0,0,0.1);
-}
-.super-search__result-date {
-  color: #BBB;
-  position: absolute;
-  right: 12px;
-}
-.super-search.is-active {
-  opacity: 1;
-  visibility: visible;
-}
+.searchcontrol{margin-top:45px;margin-bottom:0;}
+.searchcontrol input[type=text]{color:#fff;}
+.searchcontrol input[type=text]:focus{outline:none;border:none;box-shadow:none;}
+.search__results{display:block;background:#fff;list-style:none;padding:0;transition:0.2s ease;position:absolute;width:100%;-webkit-box-shadow:0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);box-shadow:0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);border-radius:2px;border:0;z-index:999;}
+.search__results.is-hidden{opacity:0;transform:translateY(-1vh);display:none;}
+.search__results > li{border-top:1px solid #f0f0f0;padding:10px 0;}
+.search__results > li > a{padding:10px;}
+.search__result-date{font-size:12px;color:#BBB;position:absolute;right:12px;}
 /* Tags */
 .taggs {
   list-style: none;
