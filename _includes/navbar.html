@@ -24,7 +24,6 @@
 	    <div class="collapse navbar-collapse" id="navigation-index">
 	    	<ul class="nav navbar-nav navbar-right">
 		<li>
-			<div id="search-box">
 		 <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                       <i class="material-icons">search</i>
                  </a>
@@ -33,31 +32,6 @@
                  <input type="text" id="js-super-search__input" class="form-control super-search__input" placeholder="Search...">
                  </div>
 	         </form>
-		</div>
-			<div id="hits">
-  <!-- Hits widget will appear here -->
-</div>
-
-<script>
-  const search = instantsearch(options);
-
-  // initialize SearchBox
-  search.addWidget(
-    instantsearch.widgets.searchBox({
-      container: '#search-box',
-      placeholder: 'Search for products'
-    })
-  );
-
-  // initialize hits widget
-  search.addWidget(
-    instantsearch.widgets.hits({
-      container: '#hits'
-    })
-  );
-
-  search.start();
-</script>
 		<!-- <div class="super-search" id="js-search">
                 <ul class="super-search__results" id="js-search__results"></ul>        
                 <button class="btn btn-primary btn-just-icon" onclick="superSearch.toggle()">
