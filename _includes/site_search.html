@@ -1,7 +1,9 @@
-<div id="search">
-    <button type="button" class="close">×</button>
-    <form>
-        <input type="search" value="" placeholder="search" />
-    </form>
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+  <form action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  </form>
+  </div>
 </div>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<i class="openBtn fa fa-search" onclick="openSearch()"></i>
