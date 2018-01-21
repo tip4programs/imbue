@@ -46,6 +46,9 @@
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
+    placeholder: :-webkit-input-placeholder {
+	color: #c2c2c2;
+}
 }
 #search .close {
     position: fixed;
