@@ -42,7 +42,7 @@
 .overlay .closebtn:hover {
     color: #ccc;
 }
-.overlay input[type=text] {
+.overlay__input{
     padding: 15px;
     font-size: 40px;
     font-weight: 300;
@@ -53,11 +53,11 @@
     border-bottom: 1px solid #fff;
     border-radius: 0;
 }
-.overlay input[type=text]:hover {
+.overlay__input:hover {
     Color: #ffffff;
     font-weight: 300;
 }
-.overlay input[type=text] {
+.overlay__input{
     outline: 0;
     box-shadow: none;
 }
