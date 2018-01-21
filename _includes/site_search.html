@@ -9,5 +9,10 @@
   </div>
 <i class="openBtn fa fa-search" onclick="openSearch()"></i>
 <script>
-  
+  superSearch({
+	searchFile: '/feed.xml',
+	searchSelector: '#js-overlay', // CSS Selector for search container element.
+	inputSelector: '#js-overlay__input', // CSS selector for <input>
+	resultsSelector: '#js-overlay__results' // CSS selector for results container
+});
   </script>
