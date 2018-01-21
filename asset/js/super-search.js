@@ -5,7 +5,7 @@
 
 (function () {
     var isSearchOpen = false,
-        searchEl = document.querySelector('#js-search'),
+        searchEl = document.querySelector('#js-overlay'),
         searchInputEl = document.querySelector('#js-overlay__input'),
         searchResultsEl = document.querySelector('#js-overlay__results'),
         currentInputValue = '',
