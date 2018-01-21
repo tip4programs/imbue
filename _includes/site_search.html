@@ -1,9 +1,11 @@
 <div id="myOverlay" class="overlay">
   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
   <div class="overlay-content">
-  <form action="/action_page.php">
-  <input type="text" placeholder="Search.." name="search">
+  <form action="">
+  <input type="text" placeholder="Search.." id="js-search__input" name="search">
   </form>
+    <ul class="search__results" id="js-search__results"></ul>
   </div>
+  
 </div>
 <i class="openBtn fa fa-search" onclick="openSearch()"></i>
