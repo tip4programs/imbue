@@ -1,4 +1,4 @@
-/* .openBtn {
+.openBtn {
     background: transparent;
     position: absolute;
     top: 15px;
@@ -93,8 +93,8 @@
     position: absolute;
     right: 12px;
 }
-*/
-.super-search-btn {
+
+/* .super-search-btn {
 	position: fixed;
 	right: 10px;
 	top: 15px;
@@ -168,4 +168,4 @@
 .super-search.is-active {
 	opacity: 1;
 	visibility: visible;
-}
+}*/
