@@ -46,8 +46,8 @@
     padding-left: 30px;
     padding-right: 30px;
     outline: none;
-	}
-    input::-webkit-input-placeholder {
+}
+   #search input::-webkit-input-placeholder {
 	color: #c2c2c2;
 }
 
