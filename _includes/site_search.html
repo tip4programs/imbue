@@ -1,18 +1,1 @@
- <div id="myOverlay" class="search">
-  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-  <div class="search-content">
-  <!-- <form> -->
-  <input class="formcontrol search__input" type="text" placeholder="Search.." id="js-search__input">
-  <!-- </form> -->
-    </div>
-    <ul class="search__results" id="js-search__results"></ul>
-  </div>
-<i class="searchBtn fa fa-search" onclick="openSearch()"></i>
-<!-- <script>
-  superSearch({
-	searchFile: '/feed.xml',
-	searchSelector: '#js-search', // CSS Selector for search container element.
-	inputSelector: '#js-search__input', // CSS selector for <input>
-	resultsSelector: '#js-search__results' // CSS selector for results container
-});
-  </script> -->
+<a href="javascript:void(0)" onclick="superSearch.toggle()"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
