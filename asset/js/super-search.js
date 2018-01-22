@@ -1,12 +1,8 @@
-/* super-search
-Author: Kushagra Gour (http://kushagragour.in)
-MIT Licensed
-*/
 (function () {
-	var searchFile = '//chipprogrammers.github.io/imbue/feed.xml',
-		searchEl,
-		searchInputEl,
-		searchResultsEl,
+	var isSearchOpen = false,
+		searchEl = document.querySelector('#js-search'),
+		searchInputEl = document.querySelector('#js-search__input'),
+		searchResultsEl = document.querySelector('#js-search__results'),
 		currentInputValue = '',
 		lastSearchResultHash,
 		posts = [];
@@ -14,9 +10,20 @@ MIT Licensed
 	// Changes XML to JSON
 	// Modified version from here: http://davidwalsh.name/convert-xml-json
 	function xmlToJson(xml) {
+
 		// Create the return object
 		var obj = {};
-		if (xml.nodeType == 3) { // text
+
+		if (xml.nodeType == 1) { // element
+			// do attributes
+			if (xml.attributes.length > 0) {
+			obj["@attributes"] = {};
+				for (var j = 0; j < xml.attributes.length; j++) {
+					var attribute = xml.attributes.item(j);
+					obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+				}
+			}
+		} else if (xml.nodeType == 3) { // text
 			obj = xml.nodeValue;
 		}
 
@@ -47,17 +54,22 @@ MIT Licensed
 
 	function getPostsFromXml(xml) {
 		var json = xmlToJson(xml);
-		// Atom 1.0 format
-		if (json.entry && json.entry instanceof Array) {
-			return json.entry;
-		}
-		// Atom 2.0 format
-		else {
-			return json.channel.item;
-		}
+		return json.channel.item;
 	}
 
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","/feed/rss.xml");
+	xmlhttp.onreadystatechange = function () {
+		if (xmlhttp.readyState != 4) return;
+		if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
+		var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
+		node = node.children[0];
+		posts = getPostsFromXml(node);
+	}
+	xmlhttp.send();
+
 	window.toggleSearch = function toggleSearch() {
+		window._gaq && _gaq.push(['_trackEvent', 'supersearch', searchEl.classList.contains('is-active')]);
 		searchEl.classList.toggle('is-active');
 		if (searchEl.classList.contains('is-active')) {
 			// while opening
@@ -71,7 +83,18 @@ MIT Licensed
 		}, 210);
 	}
 
-	function handleInput() {
+	window.addEventListener('keyup', function onKeyPress(e) {
+		if (e.which === 27) {
+			toggleSearch();
+		}
+	});
+	window.addEventListener('keypress', function onKeyPress(e) {
+		if (e.which === 47 && !searchEl.classList.contains('is-active')) {
+			toggleSearch();
+		}
+	});
+
+	searchInputEl.addEventListener('input', function onInputChange() {
 		var currentResultHash, d;
 
 		currentInputValue = (searchInputEl.value + '').toLowerCase();
@@ -83,8 +106,7 @@ MIT Licensed
 		searchResultsEl.style.offsetWidth;
 
 		var matchingPosts = posts.filter(function (post) {
-			// Search `description` and `content` both to support 1.0 and 2.0 formats.
-			if ((post.title + '').toLowerCase().indexOf(currentInputValue) !== -1 || ((post.description || post.content) + '').toLowerCase().indexOf(currentInputValue) !== -1) {
+			if ((post.title + '').toLowerCase().indexOf(currentInputValue) !== -1 || (post.description + '').toLowerCase().indexOf(currentInputValue) !== -1) {
 				return true;
 			}
 		});
@@ -96,49 +118,10 @@ MIT Licensed
 			searchResultsEl.classList.remove('is-hidden');
 			searchResultsEl.innerHTML = matchingPosts.map(function (post) {
 				d = new Date(post.pubDate);
-				return '<li><a href="' + post.link + '">' + post.title + '<span class="super-search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
+				return '<li><a href="' + post.link + '">' + post.title + '<span class="search__result-date">' + d.toUTCString().replace(/.*(\d{2})\s+(\w{3})\s+(\d{4}).*/,'$2 $1, $3') + '</span></a></li>';
 			}).join('');
 		}
 		lastSearchResultHash = currentResultHash;
-	}
-
-	function init(options) {
-		searchFile = options.searchFile || searchFile;
-		searchEl = document.querySelector(options.searchSelector || '#js-super-search');
-		searchInputEl = document.querySelector(options.inputSelector || '#js-super-search__input');
-		searchResultsEl = document.querySelector(options.resultsSelector || '#js-super-search__results');
-
-		var xmlhttp=new XMLHttpRequest();
-		xmlhttp.open('GET', searchFile);
-		xmlhttp.onreadystatechange = function () {
-			if (xmlhttp.readyState != 4) return;
-			if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
-			var node = (new DOMParser).parseFromString(xmlhttp.responseText, 'text/xml');
-			node = node.children[0];
-			posts = getPostsFromXml(node);
-		}
-		xmlhttp.send();
-
-		// Toggle on ESC key
-		window.addEventListener('keyup', function onKeyPress(e) {
-			if (e.which === 27) {
-				toggleSearch();
-			}
-		});
-		// Open on '/' key
-		window.addEventListener('keypress', function onKeyPress(e) {
-			if (e.which === 47 && !searchEl.classList.contains('is-active')) {
-				toggleSearch();
-			}
-		});
-
-		searchInputEl.addEventListener('input', function onInputChange() {
-			handleInput();
-		});
-	}
-
-	init.toggle = toggleSearch;
-
-	window.superSearch = init;
+	});
 
 })();
