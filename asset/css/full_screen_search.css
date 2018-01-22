@@ -3,11 +3,16 @@ Author: Kushagra Gour (http://kushagragour.in)
 MIT Licensed
 */
 .super-search-btn {
-	position: absolute;
-	right: 50px;
-	top: 15px;
-	fill: #fff;
+    background: transparent;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
+
 .super-search-btn:hover {
 	fill: #BBB;
 }
