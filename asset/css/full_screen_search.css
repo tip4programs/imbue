@@ -3,10 +3,10 @@ Author: Kushagra Gour (http://kushagragour.in)
 MIT Licensed
 */
 .super-search-btn {
-	position: fixed;
+	position: absolute;
 	right: 50px;
 	top: 15px;
-	fill: #DDD;
+	fill: #fff;
 }
 .super-search-btn:hover {
 	fill: #BBB;
