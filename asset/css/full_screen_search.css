@@ -1,99 +1,79 @@
-.searchBtn {
-    background: transparent;
-    position: absolute;
-    top: 15px;
-    right: 50px;
-    border: none;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    }
-.searchBtn:hover {
-    background: #bbb;
+/* super-search
+Author: Kushagra Gour (http://kushagragour.in)
+MIT Licensed
+*/
+.super-search-btn {
+	position: fixed;
+	right: 50px;
+	top: 15px;
+	fill: #DDD;
 }
-.search {
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(253,40,240,0.9);
+.super-search-btn:hover {
+	fill: #BBB;
 }
-.search-content {
-    position:static;
-    top: 3%;
-    right: 10%;
-    width: 60%;
-    text-align: center;
-    margin-top: 20px;
-    margin: auto;
+
+.super-search {
+	position: fixed;
+	background-color: rgba(0, 191, 255, 0.85);
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	transition: 0.2s ease;
+	visibility: hidden;
+	opacity: 0;
 }
-.search .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    cursor: pointer;
-    color: white;
+.super-search__close-btn {
+	fill: #DDD;
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	z-index: 1;
 }
-.search .closebtn:hover {
-    color: #ccc;
+.super-search__input {
+	border: 0;
+	font-size: 50px;
+	border-left: none;
+	border-right: none;
+	color: #999;
+	width: 100%;
+	padding: 10px 31px;
+	text-align: center;
+	transform: translateY(-100%);
+	transition: 0.15s ease-out 150ms;
 }
-.search input[type=text] {
-    padding: 15px;
-    font-size: 40px;
-    font-weight: 300;
-    border: none;
-    float: left;
-    width: 100%;
-    background: transparent;
-    border-bottom: 1px solid #fff;
-    border-radius: 0;
+.is-active .super-search__input {
+	transform: translateY(0);
 }
-.search input[type=text]:hover {
-    Color: #ffffff;
-    font-weight: 300;
+.super-search__results {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	overflow-x: hidden;
+	height: calc(100% - 110px);
+	transition: 0.2s ease;
 }
-.search input[type=text] {
-    outline: 0;
-    box-shadow: none;
+.super-search__results.is-hidden {
+	opacity: 0;
+	transform: translateY(-1vh);
 }
-.search__results {
-    display: block;
-    top: 30%;
-    width:80%;
-    Color: #fff;
-    background-color: transparent;
-    padding: 0;
-    transition: 0.2s ease;
-    position: absolute;
-    width: 100%;
-    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-    border-radius: 2px;
-    border: 0;
-    z-index: 999;
+
+.super-search__results > li > a {
+	display: block;
+	position: relative;
+	background-color: #f9f9f9;
+	color: #666;
+	padding: 17px;
+	margin: 12px 14px;
+	box-shadow: 0 3px 4px rgba(0,0,0,0.1);
 }
-.search__results.is-hidden {
-    opacity: 0;
-    transform: translateY(-1vh);
-    display: none;
+.super-search__result-date {
+	color: #BBB;
+	position: absolute;
+	right: 12px;
 }
-.search__results > li {
-    border-top: 1px solid #f0f0f0;
-    padding: 10px 0;
-    border-bottom: 1px solid #fff;
-    border-radius: 0;
-}
-.search__results > li > a {
-    padding: 10px;
-}
-.search__result-date {
-    font-size: 12px;
-    color: #BBB;
-    position: absolute;
-    right: 12px;
+.super-search.is-active {
+	opacity: 1;
+	visibility: visible;
 }
