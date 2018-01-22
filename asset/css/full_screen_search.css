@@ -42,7 +42,7 @@
 . search .closebtn:hover {
     color: #ccc;
 }
-.searchctrl input[type=text] {
+.search input[type=text] {
     padding: 15px;
     font-size: 40px;
     font-weight: 300;
@@ -53,11 +53,11 @@
     border-bottom: 1px solid #fff;
     border-radius: 0;
 }
-.searchctrl input[type=text]:hover {
+.search input[type=text]:hover {
     Color: #ffffff;
     font-weight: 300;
 }
-.searchctrl input[type=text] {
+.search input[type=text] {
     outline: 0;
     box-shadow: none;
 }
