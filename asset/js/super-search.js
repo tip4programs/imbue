@@ -7,7 +7,7 @@
     var isSearchOpen = false,
         searchEl = document.querySelector('#js-search'),
         searchInputEl = document.querySelector('#js-search__input'),
-        searchResultsEl = document.querySelector('#js-overlay__results'),
+        searchResultsEl = document.querySelector('#js-search__results'),
         currentInputValue = '',
         lastSearchResultHash,
         posts = [],
