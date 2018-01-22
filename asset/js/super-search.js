@@ -6,7 +6,7 @@
 (function () {
     var isSearchOpen = false,
         searchEl = document.querySelector('#js-search'),
-        searchInputEl = document.querySelector('#js-formcontrol),
+        searchInputEl = document.querySelector('#js-search__formcontrol),
         searchResultsEl = document.querySelector('#js-search__results'),
         currentInputValue = '',
         lastSearchResultHash,
