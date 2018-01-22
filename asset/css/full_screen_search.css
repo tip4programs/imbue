@@ -1,4 +1,4 @@
-.openBtn {
+.searchBtn {
     background: transparent;
     position: absolute;
     top: 15px;
@@ -8,10 +8,10 @@
     font-size: 20px;
     cursor: pointer;
     }
-.openBtn:hover {
+.searchBtn:hover {
     background: #bbb;
 }
-.overlay {
+.search {
     height: 100%;
     width: 100%;
     display: none;
@@ -22,7 +22,7 @@
     background-color: rgb(0,0,0);
     background-color: rgba(253,0,240,0.9);
 }
-.overlay-content {
+.search-content {
     position: relative;
     top: 10%;
     right: 10%;
@@ -31,7 +31,7 @@
     margin-top: 20px;
     margin: auto;
 }
-.overlay .closebtn {
+.search .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
@@ -39,10 +39,10 @@
     cursor: pointer;
     color: white;
 }
-.overlay .closebtn:hover {
+. search .closebtn:hover {
     color: #ccc;
 }
-.overlay input[type=text] {
+.search input[type=text] {
     padding: 15px;
     font-size: 40px;
     font-weight: 300;
@@ -53,17 +53,16 @@
     border-bottom: 1px solid #fff;
     border-radius: 0;
 }
-.overlay input[type=text]:hover {
+. search input[type=text]:hover {
     Color: #ffffff;
     font-weight: 300;
 }
-.overlay input[type=text] {
+.search input[type=text] {
     outline: 0;
     box-shadow: none;
 }
-.overlay__results {
+.search__results {
     display: block;
-    background: #fff;
     list-style: none;
     padding: 0;
     transition: 0.2s ease;
@@ -75,19 +74,19 @@
     border: 0;
     z-index: 999;
 }
-.overlay__results.is-hidden {
+.search__results.is-hidden {
     opacity: 0;
     transform: translateY(-1vh);
     display: none;
 }
-.overlay__results > li {
+. search__results > li {
     border-top: 1px solid #f0f0f0;
     padding: 10px 0;
 }
-.overlay__results > li > a {
+.search__results > li > a {
     padding: 10px;
 }
-.overlay__result-date {
+.search__result-date {
     font-size: 12px;
     color: #BBB;
     position: absolute;
