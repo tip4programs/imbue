@@ -5,8 +5,7 @@
 		searchResultsEl = document.querySelector('#js-search__results'),
 		currentInputValue = '',
 		lastSearchResultHash,
-		posts = [],
-                sitemap = (baseurl || '') + '/sitemap.xml';
+		posts = [];
 	// Changes XML to JSON
 	// Modified version from here: http://davidwalsh.name/convert-xml-json
 	function xmlToJson(xml) {
@@ -58,7 +57,7 @@
 	}
 
 	var xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("GET",sitemap);
+	xmlhttp.open("GET","/imbue/sitemap.xml");
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState != 4) return;
 		if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
