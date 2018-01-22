@@ -5,8 +5,8 @@
 
 (function () {
     var isSearchOpen = false,
-        searchEl = document.querySelector('#js-overlay'),
-        searchInputEl = document.querySelector('#js-overlay__input'),
+        searchEl = document.querySelector('#js-search'),
+        searchInputEl = document.querySelector('#js-search__input'),
         searchResultsEl = document.querySelector('#js-overlay__results'),
         currentInputValue = '',
         lastSearchResultHash,
