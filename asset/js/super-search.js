@@ -6,7 +6,7 @@
 		currentInputValue = '',
 		lastSearchResultHash,
 		posts = [];
-
+                sitemap = (baseurl || '') + '/sitemap.xml';
 	// Changes XML to JSON
 	// Modified version from here: http://davidwalsh.name/convert-xml-json
 	function xmlToJson(xml) {
@@ -58,7 +58,7 @@
 	}
 
 	var xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("GET","/feed.xml");
+	xmlhttp.open("GET",sitemap);
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState != 4) return;
 		if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
