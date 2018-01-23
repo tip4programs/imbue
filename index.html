@@ -18,12 +18,12 @@ title: Welcome to Our Blog
               </div>
               </div>
      <div class="content">
-       <div class="tab-content text-center" style="overflow:hidden">
+       <div class="tab-content text-center">
            <div class="tab-pane active" role="tabpanel" style="overflow:hidden">
            <button class="btn btn-{{ post.card_color }} btn-round">
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
-           <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
+           <p>{{ post.content | strip_html | truncatewords: 10 }}</p>
                <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
            </div>
          </div>
