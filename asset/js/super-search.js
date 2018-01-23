@@ -5,7 +5,7 @@
         searchResultsEl = document.querySelector('#js-search__results'),
         currentInputValue = '',
         lastSearchResultHash,
-        posts = [],
+        posts = [];
        // sitemap = (baseurl || '') + '/sitemap.xml';
 
     // Changes XML to JSON
