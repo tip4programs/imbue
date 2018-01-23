@@ -6,7 +6,7 @@ title: Welcome to Our Blog
 <div claa="container">
 <div class="row">
 {% for post in paginator.posts %}
-<div class="col-lg-4 col-md-2">
+<div class="col-lg-4>
    <div class="card card-nav-tabs">
       <div class="header header-{{ post.card_color }}">
         <div class="nav-tabs-wrapper">
@@ -19,7 +19,7 @@ title: Welcome to Our Blog
               </div>
      <div class="content">
        <div class="tab-content text-center">
-           <div class="tab-pane active" role="tabpanel" style="overflow:hidden">
+           <div class="tab-pane active" role="tabpanel">
            <button class="btn btn-{{ post.card_color }} btn-round">
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
