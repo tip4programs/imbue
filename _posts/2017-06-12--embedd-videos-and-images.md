@@ -4,6 +4,7 @@ title: Test Page&#8282;Embedding Videos and Images
 date:  2017-06-04 12:50:39
 categories: others
 card_color: info
+img: /static/img/1.jpg
 tags: Jekyll HTML
 ---
 # Example for Embedding Youtube Video
