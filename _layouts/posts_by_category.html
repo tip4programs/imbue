@@ -21,7 +21,7 @@ layout: default
     {% if site.categories[page.categories] %}
         {% for post in site.categories[page.categories] %}
         <div class="card card-nav-tabs">
-        <div class="header header-success">
+        <div class="header header-{{ post.card_color }}">
         <div class="nav-tabs-wrapper">
         <ul class="nav nav-tabs" data-tabs="tabs">
            <li class="nav-item">
@@ -49,11 +49,11 @@ layout: default
                 </button> -->
                 {% endif %}
             {% endif %}
-             <button class="btn btn-success btn-round">
+             <button class="btn btn-{{ post.card_color btn-round">
              <i class="fa fa-calendar" aria-hidden="true"></i>{{ post.date | date_to_string }}
              </button>
             <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-            <a href="{{ post.url |prepend:site.baseurl }}" class="btn btn-primary">Read More</a>
+            <a href="{{ post.url |prepend:site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
                          </div>
         </div>
       </div>
