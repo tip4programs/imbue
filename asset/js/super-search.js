@@ -1,5 +1,5 @@
 (function () {
-	var SearchOpen = (baseurl || '') + '/sitemap.xml',
+	var isSearchOpen = false,
 		searchEl = document.querySelector('#js-search'),
 		searchInputEl = document.querySelector('#js-search__input'),
 		searchResultsEl = document.querySelector('#js-search__results'),
@@ -57,7 +57,7 @@
 	}
 
 	var xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("GET",SearchOpen);
+	xmlhttp.open("GET","/imbue/sitemap.xml");
 	xmlhttp.onreadystatechange = function () {
 		if (xmlhttp.readyState != 4) return;
 		if (xmlhttp.status != 200 && xmlhttp.status != 304) { return; }
