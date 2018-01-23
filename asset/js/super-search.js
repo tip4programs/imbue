@@ -1,5 +1,5 @@
 (function () {
-	var SearchOpen = '/{{ site.baseurl }}/sitemap.xml',
+	var SearchOpen = (baseurl || '') + '/sitemap.xml',
 		searchEl = document.querySelector('#js-search'),
 		searchInputEl = document.querySelector('#js-search__input'),
 		searchResultsEl = document.querySelector('#js-search__results'),
