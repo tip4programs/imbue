@@ -7,7 +7,7 @@ tags: Jekyll
 ---
 
 
-<p><small>This demo page has been used from <a href="http://jasonm23.github.io/markdown-css-themes/" target="_blank">http://jasonm23.github.io/markdown-css-themes/</a>.</small></p>
+This demo page has been used from [here](http://jasonm23.github.io/markdown-css-themes/).
 
 <h1>A First Level Header</h1>
 
