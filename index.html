@@ -3,7 +3,6 @@ layout: default
 title: Welcome to Our Blog
 ---
 
-<div class="card-deck">
 {% for post in paginator.posts %}
 <div class="col-md-4">
         <div class="card card-nav-tabs">
@@ -32,10 +31,11 @@ title: Welcome to Our Blog
       </div>
    </div>
        {% endfor %}
- </div>
     <!-- Pagination links -->
                                                                                        
 <div class="text-center">
+        <br />
+        <br />
     <ul class="pagination pagination-primary flex-wrap">
     {% if paginator.total_pages == 1 %}
         <li class="page-item active">
