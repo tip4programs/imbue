@@ -16,8 +16,6 @@ title: Welcome to Our Blog
               </div>
               </div>
      <div class="content">
-             <br />
-             <br />
        <div class="tab-content text-center">
            <div class="tab-pane active" role="tabpanel" style="overflow:hidden">
            <button class="btn btn-{{ post.card_color }} btn-round">
@@ -32,10 +30,7 @@ title: Welcome to Our Blog
    </div>
        {% endfor %}
     <!-- Pagination links -->
-                                                                                       
-<div class="text-center">
-        <br />
-        <br />
+
     <ul class="pagination pagination-primary flex-wrap">
     {% if paginator.total_pages == 1 %}
         <li class="page-item active">
@@ -80,5 +75,4 @@ title: Welcome to Our Blog
   {% endif %}
 {% endif %}
 </ul>
-</div>
 <!-- end of pagination -->
