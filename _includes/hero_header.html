@@ -8,10 +8,6 @@
 						{% if page.date %}
                                                 <p>Posted on {{ page.date | date_to_string }}</p>
                                                  {% endif %}
-						 {% for category in page.categories %}
-                                                 <a href="{{ site.baseurl }}/category/{{ category }}">Category: {{ category }}</a>
-                                                {% if forloop.last == false %}, {% endif %}
-                                                 {% endfor %}
 					</div>
 				</div>
 			</div>
