@@ -8,5 +8,5 @@
 * Sticky transparent back to top button after scrolling down 1000px
 * Footer is included
 * Social share buttons using addthis(coming soon)
-* Search overlay(coming soon)
+* Search overlay
 * responsive images with fig caption and wrapping texts aound images(need some improvements)
