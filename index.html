@@ -23,7 +23,7 @@ title: Welcome to Our Blog
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-            <div class="card-footer"><a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a></div>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
            </div>
          </div>
         </div>
