@@ -1,6 +1,7 @@
 ---
 layout: posts_by_category
-categories: Web_Design
+categories: 
+- Web Designing
 title: Web Designing
 permalink: /category/Web_Design
 ---
