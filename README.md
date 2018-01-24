@@ -1,6 +1,6 @@
 ## I am not a Web Designer... So Errors and omissions are allowed. Yo can Contribute to this repository to make this jekyll theme better.
 # imbue
-**Imbue** is HCZ material theme version 2.
+**Imbue** is HCZ material theme version 2. But it also uses ideas from another jekyll repositories.
 ## Improvements and Features
 * Horizantally scrollable syntax highlight using monokai theme
 * sticky transparent navigation header
