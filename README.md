@@ -1,6 +1,6 @@
 # imbue
 **Imbue** is HCZ material theme version 2.
-## Improvements
+## Improvements and Features
 * Horizantally scrollable syntax highlight using monokai theme
 * sticky transparent navigation header
 * Posts archived by tags
@@ -10,3 +10,4 @@
 * Social share buttons using addthis(coming soon)
 * Search overlay
 * responsive images with fig caption and wrapping texts aound images(need some improvements)
+* Work with Bootstrap elements without knowing about entire HTML code
