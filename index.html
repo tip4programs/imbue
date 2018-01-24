@@ -26,7 +26,7 @@ title: Welcome to Our Blog
                </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
                <span class="label label-{{ post.card_color }}"><a href="{{ site.baseurl }}/category/{{ post.categories }}"><i class="fa fa-folder-open-o"></i>{{ post.categories }}</a></span><br />
-                 <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
+                 <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}" style="color: #ffffff">Read More</a>
            </div>
          </div>
         </div>
