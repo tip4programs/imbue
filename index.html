@@ -2,11 +2,10 @@
 layout: default
 title: Welcome to Our Blog
 ---
-
+  
+<div class="row">
 <div class="card-deck">
 {% for post in paginator.posts %}
-   
-<div class="row">
    <div class="col-sm-4">
    <div class="card card-nav-tabs">
       <div class="header header-{{ post.card_color }}">
@@ -32,10 +31,9 @@ title: Welcome to Our Blog
         </div>
       </div>
       </div>
-   </div>
        {% endfor %}
    </div>
-
+</div>
     <!-- Pagination links -->
 <div class="text-center">
     <ul class="pagination pagination-primary flex-wrap">
