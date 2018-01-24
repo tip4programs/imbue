@@ -4,6 +4,7 @@ title: Welcome to Our Blog
 ---
 
 <div class="row">
+<div class="card-group">
 {% for post in paginator.posts %}
    <div class="col-sm-4">
    <div class="card card-nav-tabs">
@@ -31,6 +32,7 @@ title: Welcome to Our Blog
       </div>
       </div>
        {% endfor %}
+   </div>
 </div>
     <!-- Pagination links -->
 <div class="text-center">
