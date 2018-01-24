@@ -1,4 +1,4 @@
-## I am not a Web Designer... So Errors and omissions are allowed. Yo can Contribute to this repository.
+## I am not a Web Designer... So Errors and omissions are allowed. Yo can Contribute to this repository to make this jekyll theme better.
 # imbue
 **Imbue** is HCZ material theme version 2.
 ## Improvements and Features
