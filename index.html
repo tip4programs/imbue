@@ -25,7 +25,7 @@ title: Welcome to Our Blog
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-                 <a href="{{ site.baseurl }}/category/{{ category }}" class="btn btn-outline-{{ post.card_color }}"><i class=fa fa-folder-open-o"></i>{{ post.categories }}</a>
+                 <a href="{{ site.baseurl }}/category/{{ category }}" class="btn btn-{{ post.card_color }} btn-sm"><i class=fa fa-folder-open-o"></i>{{ post.categories }}</a><br />
                  <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
            </div>
          </div>
