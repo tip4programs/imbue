@@ -3,6 +3,7 @@ layout: default
 title: Welcome to Our Blog
 ---
 
+<div class="card-deck">
 {% for post in paginator.posts %}
    <div class="card card-nav-tabs">
       <div class="header header-{{ post.card_color }}">
@@ -22,13 +23,13 @@ title: Welcome to Our Blog
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-               <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
+            <div class="card-footer"><a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a></div>
            </div>
          </div>
         </div>
       </div>
        {% endfor %}
-
+</div>
     <!-- Pagination links -->
 <div class="text-center">
     <ul class="pagination pagination-primary flex-wrap">
