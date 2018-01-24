@@ -22,7 +22,7 @@ share:
 enableTags: true
 tagarray: []
 
-paginate: 4
+paginate: 6
 paginate_path: "/page:num/"
 markdown: kramdown
 highlighter: rouge
