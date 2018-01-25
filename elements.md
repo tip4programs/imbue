@@ -11,7 +11,7 @@ Hai this Jekyll theme using bootstrap prepared with an aim; everybody can build 
  ```markdown
  {% raw %}
 {% include video.html id="zrkcGL5H3MU" %}
-{% enraw %}
+{% endraw %}
 ```
 It will include following video responsively.
 {% include video.html id="zrkcGL5H3MU
