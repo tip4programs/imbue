@@ -1,4 +1,4 @@
-## I am not a Web Designer... So Errors and omissions are allowed. Yo can Contribute to this repository to make this jekyll theme better.
+### I am not a Web Designer... So Errors and omissions are allowed. Yo can Contribute to this repository to make this jekyll theme better.
 # imbue
 **Imbue** is HCZ material theme version 2. But it also uses ideas from another jekyll repositories.
 ## Improvements and Features
@@ -12,3 +12,6 @@
 * Search overlay
 * responsive images with fig caption and wrapping texts aound images(need some improvements)
 * Work with Bootstrap elements without knowing about entire HTML code
+# Fixes
+* Problems with **site.url** and **base.url**
+* Problems with **sitemap.xml**
