@@ -1,6 +1,6 @@
 ---
 title: Bootstrap Elements with Jekyll
-layout:default
+layout: default
 ---
 
 ### Why Bootstrap Elements on Jekyll?
