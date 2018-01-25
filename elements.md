@@ -14,4 +14,4 @@ Hai this Jekyll theme using bootstrap prepared with an aim; everybody can build 
 {% endraw %}
 ```
 It will include following video responsively.
-{% include video.html id="zrkcGL5H3MU
+{% include video.html id="zrkcGL5H3MU %}
