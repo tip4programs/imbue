@@ -4,7 +4,7 @@
 ## Improvements and Features
 * Horizantally scrollable syntax highlight using monokai theme
 * sticky transparent navigation header
-* Posts archived by tags
+* Posts archived using tags
 * Embedding **YouTube** videos responsively.
 * Sticky transparent back to top button after scrolling down 1000px
 * Footer is included
