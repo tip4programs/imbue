@@ -10,6 +10,7 @@
 * Footer is included
 * Social share buttons using addthis(coming soon)
 * Search overlay
+* Featured image for each post cards and bootstrap colors for each post cards
 * responsive images with fig caption and wrapping texts aound images(need some improvements)
 * Work with Bootstrap elements without knowing about entire HTML code
 # Fixes
