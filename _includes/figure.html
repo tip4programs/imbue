@@ -1,5 +1,4 @@
 {% if include.alt %}{% assign altText = include.alt %}{% else %}{% assign altText = include.caption %}{% endif %}
-{% if include.position==center %}
 <figure>
      <div class="text-center">
        <img src="{{ include.image }}" class="img-responsive" {% if altText %}alt="{{ altText }}"{% endif %}>
@@ -11,4 +10,3 @@
 <img src="{{ include.image }}" class="img-responsive" {% if altText %}alt="{{ altText }}"{% endif %}>
  {% if include.caption %} <figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
- {% endif %}
