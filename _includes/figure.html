@@ -1,7 +1,11 @@
 {% if include.alt %}{% assign altText = include.alt %}{% else %}{% assign altText = include.caption %}{% endif %}
 <figure style="{% if include.position %}float:{{ include.position }}{% endif %};">
- <!-- <div class="clearfix"> -->
+{% if include.position=center %} 
+ <div class="text-center">
   <img src="{{ include.image }}" class="img-responsive" {% if altText %}alt="{{ altText }}"{% endif %}>
- <!-- </div> -->
+ </div>
+ {% else %}
+ <img src="{{ include.image }}" class="img-responsive" {% if altText %}alt="{{ altText }}"{% endif %}>
+ {% endif %}
     {% if include.caption %} <figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>
