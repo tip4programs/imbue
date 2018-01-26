@@ -6,6 +6,5 @@ group :jekyll_plugins do
   gem 'jekyll-gist'
   gem 'jekyll-watch'
   gem 'kramdown'
-  gem 'rouge'
-  gem 'jekyll-lunr-js-search', '~> 3.3'
+  gem 'rouge', '~> 1.10', '>= 1.10.1'
 end
