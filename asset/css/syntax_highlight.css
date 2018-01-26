@@ -108,8 +108,3 @@ pre {
 .highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
 .highlight .vm { color: #f8f8f2 } /* Name.Variable.Magic */
 .highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
-
-// .post > .highlight .lineno { color: #ccc; display:inline-block; padding: 0 5px; border-right:1px solid #ccc; }
-.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;} 
-.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
-.lineno::selection {background-color: transparent;} /* Other major browsers */
