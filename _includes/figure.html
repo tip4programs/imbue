@@ -1,5 +1,4 @@
-</figure>
-{% else %}
+{% if include.alt %}{% assign altText = include.alt %}{% else %}{% assign altText = include.caption %}{% endif %}
 <figure style="{% if include.position %}float:{{ include.position }}{% endif %};">
  <!-- <div class="clearfix"> -->
   <img src="{{ include.image }}" class="img-responsive" {% if altText %}alt="{{ altText }}"{% endif %}>
