@@ -16,4 +16,4 @@ Hai... This Jekyll theme using bootstrap prepared with an aim; everybody can bui
  
 ## Alert Boxes
 
-{% include alert.html alert_type="warning" heading=text="GOVERNMENT WARNING:" text="(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects.(2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems." %}
+{% include alert.html alert_type="warning" heading="GOVERNMENT WARNING:" text="(1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects.(2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems." %}
