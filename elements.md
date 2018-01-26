@@ -14,3 +14,6 @@ Hai... This Jekyll theme using bootstrap prepared with an aim; everybody can bui
 ## Adding responsive image
  This theme allows you to pull the image to right side and pt your image center with an attractive caption. Also If you pull the image to right side this theme allows you to wrap text around the image.
  
+## Alert Boxes
+
+{% include alert.html alert_type="warning" text="GOVERNMENT WARNING: (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems." %}
