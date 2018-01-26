@@ -27,7 +27,6 @@ function digclock()
 {
  var d = new Date()
  var t = d.toLocaleTimeString()
- 
  document.getElementById("clock").innerHTML = t
 }
 setInterval(function(){digclock()},1000)
@@ -35,4 +34,5 @@ setInterval(function(){digclock()},1000)
 <font color=#5bb66f>Now: </font><div id="clock">
 </div>
 {% endhighlight %}
+ 
 In the seventeenth line of your code you can see a Now:. The same thing you can see at the footer of this site. If there is no `display:inline;`on the style, the time and Now: displayed on the different lines. The  1 sec. delay is produced using `setInterval(function(){digclock()},1000)` which gives 1000 milli second or 1 second delay. While `var t = d.toLocaleTimeString()` returns the time portion of a Date object as a string, using locale conventions. I am not going to more technical detaild. If you have any doubt [w3schools](https://w3schools.com) will be a greate tutor for you... Most probably your theme have a `footer.html` file. Open that file and include time.html using {% raw %}{% include time.html %}{% endraw %}. Like this you can add this time.html on the header, footer, post, page... anywhereelse.
