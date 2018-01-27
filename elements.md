@@ -14,7 +14,7 @@ Hai... This Jekyll theme using bootstrap prepared with an aim; everybody can bui
 ## Adding responsive image
  This theme allows you to pull the image to right side and pt your image center with an attractive caption. Also If you pull the image to right side this theme allows you to wrap text around the image.
  
- {% include figure.html image="https://unsplash.it/300/400?image=123" caption="This image has caption as well as alt text" alt="This image has alt text" position="center" %}
+ {% include figure.html image="https://unsplash.it/300/400?image=123" caption="This image has caption as well as alt text" alt="This image has alt text" %}
  
  Unfortunately pulling image towards left do not allows you to wrap text around the image. `Anybody can contribute that awesomeness to this work`.
  {% include figure.html image="https://unsplash.it/300/400?image=123" caption="This image has a caption but also alt text" alt="This is the alt text" position="right" %}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis quam vitae ipsum vehicula laoreet eget et turpis. Fusce dapibus vel magna in interdum. Sed euismod luctus lectus et fermentum. Sed efficitur tempor dui. Nulla malesuada risus nec mauris condimentum tempor. Phasellus nulla dolor, condimentum ut sollicitudin non, mattis mattis ipsum. Cras pharetra mi eu mauris aliquet, dignissim faucibus sapien lacinia. Cras at mi nisl. Phasellus ex ipsum, mattis vehicula egestas vehicula, pulvinar nec lorem. Phasellus accumsan lobortis magna, eu condimentum felis. Proin blandit est id nulla efficitur scelerisque. In vehicula nisi vel sapien venenatis, accumsan gravida ex fringilla. Mauris ac consectetur nibh.
