@@ -55,35 +55,27 @@
    border-left-color: #32CD32;
 }
 /* figure caption */
-.figure {
+.figure{
 	padding: 0.9em;
-	border: 3px solid #000000;
-	background: #fff;
 	margin: 0 auto 1em;
 }
-
-.figure img {
-	margin: 0 auto;
+.figure img{
+    	margin: 0 auto;
 	display: block;
 	max-width: 100%;
 }
-
 .figure figcaption {
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 0.8em;
-	padding: .5em;
-	text-align: center;
-	color: #fff;
-	background: #f5bca8;
-	counter-increment: figures;
+  padding: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #808080;
+  border: none;
+  display: block;
+  background: transparent;
+  word-wrap:normal;
+  text-align: center;
 }
-
-.figure figcaption:before {
-	content: 'Fig. ' counter(figures) ' - ';
-}
-
 .figure-left {
 	float: left;
 	margin: 0 1.5em .5em 0;
@@ -91,7 +83,6 @@
 	width: -moz-min-content;
 	width: min-content;
 }
-
 .figure-right {
 	float: right;
 	margin: 0 0 .5em 1.5em;
