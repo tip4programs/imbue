@@ -17,9 +17,11 @@ layout: default
         {% endfor %}
     {% endfor %}
     <hr />
-
+    <div class="card-deck">
+    <div class="row">
     {% if site.categories[page.categories] %}
         {% for post in site.categories[page.categories] %}
+        <div class="col-sm-6">
         <div class="card card-nav-tabs">
         <div class="header header-{{ post.card_color }}">
         <div class="nav-tabs-wrapper">
@@ -57,8 +59,12 @@ layout: default
                          </div>
         </div>
       </div>
-   </div>
+
+</div>
+</div>
 {% endfor %}
+  </div>
+  </div>
     {% else %}
      <p>There are no posts in this categories.</p>
     {% endif %}
