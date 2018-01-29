@@ -18,14 +18,14 @@ title: Welcome to Our Blog
               </div>
               </div>
      <div class="content">
-        <img class="card-img-top img-responsive" src="{{ site.baseurl }}/{{ post.img }}" alt="Card image">
+        <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend:post.img }}" alt="Card image">
        <div class="tab-content text-center">
            <div class="tab-pane active" role="tabpanel" style="overflow: hidden;">
+          <a class="category" href="{{ site.baseurl }}/category/{{ post.categories }}"><i class="fa fa-folder-open-o"></i>{{ post.categories }}</a><br />
            <button class="btn btn-{{ post.card_color }} btn-round">
                <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
                </button>
            <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-              <span class="label label-{{ post.card_color }}" style="color:#fff;"><a href="{{ site.baseurl }}/category/{{ post.categories }}"><i class="fa fa-folder-open-o"></i>{{ post.categories }}</a></span><br />
                  <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
            </div>
          </div>
