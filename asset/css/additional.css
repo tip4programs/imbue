@@ -114,5 +114,7 @@
 .card .category{
     color: #999999;
     text-align: center;
+    font-family: 'Ubuntu', sans-serif;
     margin-bottom: 20px;
+    color:orange;
 }
