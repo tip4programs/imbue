@@ -6,32 +6,7 @@ title: Welcome to Our Blog
 <div class="card-deck">
 <div class="row">
 {% for post in paginator.posts %}
-   <div class="col-sm-6">
-   <div class="card card-nav-tabs">
-      <div class="header header-{{ post.card_color }}">
-        <div class="nav-tabs-wrapper">
-      <ul class="nav nav-tabs" data-tabs="tabs">
-       <li class="nav-item">
-       {{ post.title }}
-          </li>
-       </ul>
-              </div>
-              </div>
-     <div class="content">
-        <img class="card-img-top img-responsive" src="{{ site.baseurl }}/{{ post.img }}" alt="Card image">
-       <div class="tab-content text-center">
-           <div class="tab-pane active" role="tabpanel" style="overflow: hidden;">
-           <button class="btn btn-{{ post.card_color }} btn-round">
-               <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }}
-               </button>
-           <p>{{ post.content | strip_html | truncatewords: 40 }}</p>
-              <span class="label label-{{ post.card_color }}" style="color:#fff;"><a href="{{ site.baseurl }}/category/{{ post.categories }}"><i class="fa fa-folder-open-o"></i>{{ post.categories }}</a></span><br />
-                 <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-{{ post.card_color }}">Read More</a>
-           </div>
-         </div>
-        </div>
-      </div>
-   </div>
+ {% include hipster_card.html %}
        {% endfor %}
      </div>
   </div>
