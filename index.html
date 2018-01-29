@@ -18,7 +18,7 @@ title: Welcome to Our Blog
               </div>
               </div>
      <div class="content">
-        <img class="card-img-top img-responsive" src="{{ site.baseurl | prepend:post.img }}" alt="Card image">
+        <img class="card-img-top img-responsive" src="{{ site.baseurl }}{{ post.img }}" alt="Card image">
        <div class="tab-content text-center">
            <div class="tab-pane active" role="tabpanel" style="overflow: hidden;">
           <a class="category" href="{{ site.baseurl }}/category/{{ post.categories }}"><i class="fa fa-folder-open-o"></i>{{ post.categories }}</a><br />
