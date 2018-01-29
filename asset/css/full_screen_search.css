@@ -13,7 +13,7 @@ MIT Licensed
     cursor: pointer;
 }*/
 .search-btn {
-	position: absolute;
+	position: fixed;
 	right: 50px;
 	top: 15px;
 	fill: #DDD;
