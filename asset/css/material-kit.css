@@ -3546,7 +3546,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .main {
-  background: #222222;
+  background: #FFFFFF;
   position: relative;
   z-index: 3;
 }
