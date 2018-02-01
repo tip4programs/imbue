@@ -122,18 +122,18 @@
 }
 /* Typography */
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
