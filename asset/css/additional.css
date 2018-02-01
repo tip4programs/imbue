@@ -121,10 +121,24 @@
     font-weight: bold;
 }
 /* Typography */
-@media (max-width: @screen-xs) {
-    main-raised{font-size: 10px;}
+html {
+  font-size: 14px;
 }
 
-@media (max-width: @screen-sm) {
-    main{font-size: 22px;}
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 28px;
+  }
 }
