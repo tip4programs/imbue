@@ -122,9 +122,9 @@
 }
 /* Typography */
 @media (max-width: @screen-xs) {
-    body{font-size: 10px;}
+    main{font-size: 10px;}
 }
 
 @media (max-width: @screen-sm) {
-    body{font-size: 22px;}
+    main{font-size: 22px;}
 }
