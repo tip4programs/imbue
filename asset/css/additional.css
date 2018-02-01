@@ -122,7 +122,7 @@
 }
 /* Typography */
 @media (max-width: @screen-xs) {
-    main{font-size: 10px;}
+    main-raised{font-size: 10px;}
 }
 
 @media (max-width: @screen-sm) {
