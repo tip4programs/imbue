@@ -121,24 +121,24 @@
     font-weight: bold;
 }
 /* Typography */
-body {
-  font-size: 24px;
+index page {
+  font-size: 16px;
 }
 
 @include media-breakpoint-up(sm) {
-  body {
-    font-size: 24px;
+  index-page {
+    font-size: 18px;
   }
 }
 
 @include media-breakpoint-up(md) {
-  body {
-    font-size: 22px;
+  index-page {
+    font-size: 20px;
   }
 }
 
 @include media-breakpoint-up(lg) {
-  body {
-    font-size: 28px;
+  index-page {
+    font-size: 22px;
   }
 }
